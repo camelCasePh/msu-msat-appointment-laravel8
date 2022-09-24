@@ -108,18 +108,6 @@
             <div class="card-body">
                 <p class="login-box-msg">Register to start an appointment</p>
 
-                {{-- @if ($errors->any())
-                    @foreach ($errors->all() as $error)
-                        <p style="color:red">{{ $error }}</p>
-                    @endforeach
-                @endif --}}
-                {{-- @php
-                    use Illuminate\Support\Facades\Auth;
-                @endphp --}}
-                {{-- @if (Auth::checke)
-                    {{ route('home') }}
-                @endif --}}
-
                 <form action="{{ route('register') }}" method="post">
                     @csrf
 
@@ -136,7 +124,7 @@
                     <span class="text-danger">
                         @error('fName')
 
-                            @if ($message == 'The f name must be a string.' || $message == 'The f name format is invalid.')
+                            @if ($message == 'The f name field is required.' || $message == 'The f name format is invalid.')
                                 {{ $message = 'Please enter a valid Name.' }}
                             @else
                                 {{ $message }}
@@ -155,7 +143,7 @@
                     <span class="text-danger">
                         @error('lName')
 
-                            @if ($message == 'The l name must be a string.' || $message == 'The l name format is invalid.')
+                            @if ($message == 'The l name field is required.' || $message == 'The l name format is invalid.')
                                 {{ $message = 'Please enter a valid Last Name.' }}
                             @else
                                 {{ $message }}
@@ -173,7 +161,7 @@
                     <span class="text-danger">
                         @error('email')
 
-                            @if ($message == 'The email must be a string.')
+                            @if ($message == 'The email field is required.')
                                 {{ $message = 'Please enter a valid email.' }}
                             @else
                                 {{ $message }}
@@ -191,7 +179,7 @@
                     <span class="text-danger">
                         @error('password')
 
-                            @if ($message == 'The password must be a string.')
+                            @if ($message == 'The password field is required.')
                                 {{ $message = 'Please enter a valid password.' }}
                             @else
                                 {{ $message }}
