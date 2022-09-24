@@ -239,14 +239,35 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('logout') }}" class="nav-link">
-                                <i class="nav-icon fa-solid fa-right-from-bracket"></i>
-                                <p style="color: white;">
-                                    Logout
 
+
+                        {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form> --}}
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+
+
+                                <i class="nav-icon fa-solid fa-right-from-bracket"></i>
+
+                                <p>
+                                    Logout
                                 </p>
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
 
                     </ul>
