@@ -213,7 +213,8 @@
                         <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block" style="color: white;">Bryan Ladion</a>
+                        <a href="#" class="d-block" style="color: white;">{{ Auth::user()->fName }}
+                            {{ Auth::user()->lName }}</a>
                     </div>
                 </div>
 
@@ -222,14 +223,16 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
 
-                        <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
-                                <i class="nav-icon fa-regular fa-user"></i>
-                                <p style="color: white;">
-                                    Profile
-                                </p>
-                            </a>
-                        </li>
+                        @if (Auth::user()->isAdmin == 0)
+                            <li class="nav-item">
+                                <a href="../widgets.html" class="nav-link">
+                                    <i class="nav-icon fa-regular fa-user"></i>
+                                    <p style="color: white;">
+                                        Profile
+                                    </p>
+                                </a>
+                            </li>
+                        @endif
                         <li class="nav-item">
                             <a href="../widgets.html" class="nav-link">
                                 <i class="nav-icon fa-regular fa-calendar-check"></i>
@@ -239,6 +242,17 @@
                                 </p>
                             </a>
                         </li>
+                        @if (Auth::user()->isAdmin == 1)
+                            <li class="nav-item">
+                                <a href="../widgets.html" class="nav-link">
+                                    <i class="nav-icon fa-regular fa-calendar-check"></i>
+                                    <p style="color: white;">
+                                        Approved
+                                        <span class="right badge badge-danger">0 Approved</span>
+                                    </p>
+                                </a>
+                            </li>
+                        @endif
 
 
                         {{-- <a class="dropdown-item" href="{{ route('logout') }}"

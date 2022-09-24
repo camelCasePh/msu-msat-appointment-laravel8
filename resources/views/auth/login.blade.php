@@ -178,12 +178,20 @@
               <div class="card-body">
                   <p class="login-box-msg">Sign in to start an appointment</p>
 
-                  @if (Session::has('error'))
+                  {{-- @if (Session::has('error'))
                       <p style="color: red;">{{ Session::get('error') }}</p>
-                  @endif
+                  @endif --}}
 
                   <form action="{{ route('login') }}" method="post">
                       @csrf
+
+                      <span class="text-danger ml-1 mb-2">
+                          @error('email')
+                              @if ($message == 'These credentials do not match our records.')
+                                  {{ $message = 'The Email or Password is Invalid.' }}
+                              @endif
+                          @enderror
+                      </span>
                       <div class="input-group mb-3">
                           <input type="email" name="email" class="form-control" placeholder="Email"
                               value="{{ old('email') }}">
@@ -193,9 +201,18 @@
                               </div>
                           </div>
                       </div>
+
                       <span class="text-danger">
+
                           @error('email')
-                              {{ $message }}
+
+                              @if ($message == 'The email field is required.')
+                                  {{ $message = 'Please enter a valid email.' }}
+                              @elseif ($message == 'These credentials do not match our records.')
+                                  {{ $message = '' }}
+                              @else
+                                  {{ $message }}
+                              @endif
                           @enderror
                       </span>
                       <div class="input-group mb-3">
@@ -208,9 +225,19 @@
                       </div>
                       <span class="text-danger">
                           @error('password')
-                              {{ $message }}
+
+                              @if ($message == 'The password field is required.')
+                                  {{ $message = 'Please enter a valid password.' }}
+                              @else
+                                  {{ $message }}
+                              @endif
                           @enderror
                       </span>
+                      {{-- <span class="text-danger">
+                          @error('password')
+                              {{ $message }}
+                          @enderror
+                      </span> --}}
                       <div class="row">
                           <div class="col-8">
                               <div class="icheck-primary">
