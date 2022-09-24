@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Middleware\AuthMiddleware;
+use Illuminate\Support\Facades\Auth;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +18,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('Layout/home');
-})->name('home');
-Route::get('/', function () {
-    return view('Authentication/login');
-})->name('login');
-Route::get('/register/{usertype}', function ($usertype) {
-    return view('Authentication/register',['usertype'=>$usertype]);
-})->name('register');
+Route::group(['middlware'=>'web'],function(){
+
+    Route::get('/',function(){
+    return view('/Authentication/login');
+});
+
+Route::get('/login',[AuthController::class,'loadLogin'])->name('loadLogin');
+Route::post('/login',[AuthController::class,'userLogin'])->name('userLogin');
+
+Route::get('register/{usertype}',[AuthController::class,'loadRegister'])->name('loadRegister');
+Route::post('register/',[AuthController::class,'userRegister'])->name('userRegister');
+
 Route::get('/studentoralumni', function () {
     return view('Authentication/student-alumni-register');
 })->name('register-student-alumni');
+
+
+
+             Route::get('/home', function () {
+                return view('Layout/home');
+            })->name('home');
+
+
+
+    Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+
+});
+
+
+
+
+
+
 

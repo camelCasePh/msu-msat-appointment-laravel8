@@ -24,38 +24,66 @@
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="../../index2.html" class="h4"> <img src="dist/img/msatlogo.jpg" alt=""
-                        width="50px">
+                <a href="#" class="h4"> <img src="dist/img/msatlogo.jpg" alt="" width="50px">
                     <b>MSU-MSAT</b>Appointment</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Register to start an appointment</p>
 
-                @if ($errors->any())
+                {{-- @if ($errors->any())
                     @foreach ($errors->all() as $error)
                         <p style="color:red">{{ $error }}</p>
                     @endforeach
-                @endif
+                @endif --}}
+                {{-- @php
+                    use Illuminate\Support\Facades\Auth;
+                @endphp --}}
+                {{-- @if (Auth::checke)
+                    {{ route('home') }}
+                @endif --}}
 
-                <form action="#" method="post">
+                <form action="{{ route('userRegister') }}" method="post">
                     @csrf
 
                     <div class="input-group mb-2">
-                        <input type="text" name="fname" class="form-control" placeholder="First name">
+                        <input type="text" name="fName" class="form-control" placeholder="First name">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
+
                         </div>
+
                     </div>
+                    <span class="text-danger">
+                        @error('fName')
+
+                            @if ($message == 'The f name must be a string.' || $message == 'The f name format is invalid.')
+                                {{ $message = 'Please enter a valid Name.' }}
+                            @else
+                                {{ $message }}
+                            @endif
+                        @enderror
+                    </span>
+
                     <div class="input-group mb-2">
-                        <input type="text" name="lname" class="form-control" placeholder="Last name">
+                        <input type="text" name="lName" class="form-control" placeholder="Last name">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger">
+                        @error('lName')
+
+                            @if ($message == 'The l name must be a string.' || $message == 'The l name format is invalid.')
+                                {{ $message = 'Please enter a valid Last Name.' }}
+                            @else
+                                {{ $message }}
+                            @endif
+                        @enderror
+                    </span>
                     <div class="input-group mb-2">
                         <input type="email" name="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
@@ -64,6 +92,16 @@
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger">
+                        @error('email')
+
+                            @if ($message == 'The email must be a string.')
+                                {{ $message = 'Please enter a valid email.' }}
+                            @else
+                                {{ $message }}
+                            @endif
+                        @enderror
+                    </span>
                     <div class="input-group mb-2">
                         <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
@@ -72,8 +110,18 @@
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger">
+                        @error('password')
+
+                            @if ($message == 'The password must be a string.')
+                                {{ $message = 'Please enter a valid password.' }}
+                            @else
+                                {{ $message }}
+                            @endif
+                        @enderror
+                    </span>
                     <div class="input-group mb-3">
-                        <input type="password" name="confirm-password" class="form-control"
+                        <input type="password" name="password_confirmation" class="form-control"
                             placeholder="Retype password">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -81,20 +129,14 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="input-group mb-2">
-                        <input type="hidden" name="usertype" class="form-control" value="{{ $usertype }}">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-
-
+                        <input type="hidden" name="studentType" class="form-control" value="{{ $usertype }}">
                     </div>
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
-                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                <input type="checkbox" id="agreeTerms" name="terms" value="agree" required>
                                 <label for="agreeTerms">
                                     I agree to the <a href="#">terms</a>
                                 </label>
@@ -123,7 +165,7 @@
                     </a>
                 </div>
 
-                <a href="{{ route('login') }}" class="text-center">I already have an account</a>
+                <a href="{{ route('loadLogin') }}" class="text-center">I already have an account</a>
             </div>
             <!-- /.form-box -->
         </div><!-- /.card -->

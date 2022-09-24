@@ -138,6 +138,28 @@
         justify-content: center;
     }
 
+    .login-card-body,
+    .register-card-body {
+        background-color: #ecf0f1;
+        border-top: 0;
+        color: #666;
+        padding: 20px;
+    }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #ecf0f1;
+        background-clip: border-box;
+        border: 0 solid rgba(0, 0, 0, .125);
+        border-radius: 0.25rem;
+    }
+
     .btn {
         flex: 1 1 auto;
         margin: 10px;
@@ -157,8 +179,10 @@
     }
 
     .btn-2 {
-        background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
-        border-color: #a6c1ee;
+        /* background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); */
+        /* border-color: #a6c1ee; */
+
+        background-color: white;
 
     }
 
@@ -176,6 +200,8 @@
     .btn:hover {
         background-position: right center;
         font-weight: bold;
+        background-color: #b33939;
+        color: white;
         /* change the direction of the change here */
     }
 </style>

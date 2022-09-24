@@ -86,30 +86,45 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="../../index2.html" class="h4"> <img src="dist/img/msatlogo.jpg" alt=""
-                        width="50px">
+                <a href="#" class="h4"> <img src="dist/img/msatlogo.jpg" alt="" width="50px">
                     <b>MSU-MSAT</b>Appointment</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start an appointment</p>
 
-                <form action="../../index3.html" method="post">
+                @if (Session::has('error'))
+                    <p style="color: red;">{{ Session::get('error') }}</p>
+                @endif
+
+                <form action="{{ route('userLogin') }}" method="post">
+                    @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email"
+                            value="{{ old('email') }}">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger">
+                        @error('email')
+                            {{ $message }}
+                        @enderror
+                    </span>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger">
+                        @error('password')
+                            {{ $message }}
+                        @enderror
+                    </span>
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
