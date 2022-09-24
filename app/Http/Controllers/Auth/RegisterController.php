@@ -46,6 +46,9 @@ class RegisterController extends Controller
         return view('auth.register',compact('usertype'));
     }
 
+    public function preregister(){
+        return view('auth.student-alumni-register');
+    }
     //  public function userRegister(Request $request){
 
     //     $request->validate([

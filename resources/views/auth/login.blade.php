@@ -242,7 +242,7 @@
                       <a href="forgot-password.html">I forgot my password</a>
                   </p>
                   <p class="mb-0">
-                      <a href="{{ route('register-student-alumni') }}" class="text-center">Register an account</a>
+                      <a href="{{ route('pre-register') }}" class="text-center">Register an account</a>
                   </p>
               </div>
               <!-- /.card-body -->

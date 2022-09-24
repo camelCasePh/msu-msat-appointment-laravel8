@@ -30,9 +30,9 @@ Route::post('/login',[LoginController::class,'userLogin'])->name('login');
 
 Route::get('register/{usertype}',[RegisterController::class,'index']);
 Route::post('register/',[RegisterController::class,'create'])->name('register');
-Route::get('/studentoralumni', function () {
-    return view('Authentication/student-alumni-register');
-})->name('register-student-alumni');
+
+
+Route::get('/pre-register', [RegisterController::class,'preregister'])->name('pre-register');
 
 
 Route::middleware(['auth'])->group(function () {
