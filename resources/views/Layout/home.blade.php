@@ -2,6 +2,9 @@
 @section('content')
     <div class="card mt-5 ml-5 mr-5 ">
         <div class="card-header">
+
+
+
             <h3 class="card-title">Set Appointment</h3>
         </div>
         <div class="card-body  ">
