@@ -164,6 +164,10 @@
           .h4:hover {
               color: #b33939;
           }
+
+          /* .fa-google {
+              color: white;
+          } */
       </style>
   </head>
 
@@ -262,7 +266,7 @@
                           <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
                       </a>
                       <a href="#" class="btn btn-block btn-darkblue">
-                          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                          <i class="fab fa-brands fa-google"></i></i> Sign in using Google
                       </a>
                   </div>
                   <!-- /.social-auth-links -->

@@ -235,8 +235,10 @@
                         @endif
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link">
-                                <i class="nav-icon fa-regular fa-calendar-check"></i>
+
+                                <i class="nav-icon fa-sharp fa-solid fa-calendar-plus"></i>
                                 <p style="color: white;">
+
                                     Appointment
                                     {{-- <span class="right badge badge-danger">0 Pending</span> --}}
                                 </p>
@@ -251,15 +253,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-calendar-days"></i>
-                                <p style="color: white;">
-                                    Calendar
-                                    {{-- <span class="right badge badge-danger">0 Pending</span> --}}
-                                </p>
-                            </a>
-                        </li>
+
                         @if (Auth::user()->isAdmin == 1)
                             <li class="nav-item">
                                 <a href="../widgets.html" class="nav-link">
@@ -271,6 +265,15 @@
                                 </a>
                             </li>
                         @endif
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-calendar-days"></i>
+                                <p style="color: white;">
+                                    Calendar
+                                    {{-- <span class="right badge badge-danger">0 Pending</span> --}}
+                                </p>
+                            </a>
+                        </li>
 
 
                         {{-- <a class="dropdown-item" href="{{ route('logout') }}"
