@@ -185,13 +185,14 @@
                   <form action="{{ route('login') }}" method="post">
                       @csrf
 
-                      <span class="text-danger ml-1 mb-2">
+                      <span class="alert-danger ml-1 mb-2">
                           @error('email')
                               @if ($message == 'These credentials do not match our records.')
                                   {{ $message = 'The Email or Password is Invalid.' }}
                               @endif
                           @enderror
                       </span>
+
                       <div class="input-group mb-3">
                           <input type="email" name="email" class="form-control" placeholder="Email"
                               value="{{ old('email') }}">
@@ -201,6 +202,7 @@
                               </div>
                           </div>
                       </div>
+
 
                       <span class="text-danger">
 

@@ -174,7 +174,7 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block ">
-                    <a href="../../index3.html" class="nav-link  " style="color:white;">Home</a>
+                    <a href="{{ route('home') }}" class="nav-link  " style="color:white;">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link" style="color:white;">Contact</a>
@@ -210,7 +210,7 @@
 
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="../../dist/img/profile-pic.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block" style="color: white;">{{ Auth::user()->fName }}
@@ -225,7 +225,7 @@
 
                         @if (Auth::user()->isAdmin == 0)
                             <li class="nav-item">
-                                <a href="../widgets.html" class="nav-link">
+                                <a href="{{ route('profile') }}" class="nav-link">
                                     <i class="nav-icon fa-regular fa-user"></i>
                                     <p style="color: white;">
                                         Profile
@@ -234,11 +234,29 @@
                             </li>
                         @endif
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="{{ route('home') }}" class="nav-link">
                                 <i class="nav-icon fa-regular fa-calendar-check"></i>
+                                <p style="color: white;">
+                                    Appointment
+                                    {{-- <span class="right badge badge-danger">0 Pending</span> --}}
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('request') }}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-clipboard-list"></i>
                                 <p style="color: white;">
                                     Request
                                     <span class="right badge badge-danger">0 Pending</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-calendar-days"></i>
+                                <p style="color: white;">
+                                    Calendar
+                                    {{-- <span class="right badge badge-danger">0 Pending</span> --}}
                                 </p>
                             </a>
                         </li>
@@ -301,7 +319,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active">Appointment</li>
                             </ol>
                         </div>

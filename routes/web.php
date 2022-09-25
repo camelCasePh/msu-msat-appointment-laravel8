@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RequestController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,9 +40,12 @@ Route::get('/pre-register', [RegisterController::class,'preregister'])->name('pr
 
 Route::middleware(['auth'])->group(function () {
 
-                 Route::get('/home', function () {
-                return view('Layout/home');
-            })->name('home');
+            //      Route::get('/home', function () {
+            //     return view('Layout/home');
+            // })->name('home');
+            Route::get('/home', [HomeController::class,'index'])->name('home');
+             Route::get('/profile', [ProfileController::class,'index'])->name('profile');
+              Route::get('/request', [RequestController::class,'index'])->name('request');
             //   Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 });
 
