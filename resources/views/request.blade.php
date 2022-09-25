@@ -68,8 +68,8 @@
                         <td>ddsfdsf</td>
                         <td>dsfsdfs</td>
                         <td>fdsfsdf</td>
-
-                        <td> {{-- @if (Auth::user()->role == 1) --}}
+                        <td>fdsfsdf</td>
+                        <td class="text-center"> {{-- @if (Auth::user()->role == 1) --}}
                             {{-- <td class="d-flex justify-content-around"><a href="#editModal{{ $lead->id }}"
                                         data-bs-toggle="modal"><i class="fa-solid fa-pencil" style="color:black;"> </i></a> --}}
                             <a href="#deleteModal" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"
@@ -99,7 +99,7 @@
 
                             <div class="modal-body">
 
-                                <h5>Are you sure you want to delete this data?</h5>
+                                <h5>Are you sure you want to cancel Appointment?</h5>
                             </div>
 
 
