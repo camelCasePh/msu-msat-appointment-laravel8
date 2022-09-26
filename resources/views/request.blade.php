@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Request Page</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item active">Request</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
     <style>
         .table>:not(:last-child)>:last-child>* {
             border-bottom-color: red;
@@ -41,7 +56,9 @@
 
 
                 <!-- ./card-header -->
+
                 <div class="card-body">
+
                     <table class="table table-bordered table-hover ">
 
                         <thead>
@@ -69,11 +86,27 @@
                         <td>dsfsdfs</td>
                         <td>fdsfsdf</td>
                         <td>fdsfsdf</td>
-                        <td class="text-center"> {{-- @if (Auth::user()->role == 1) --}}
+                        <td> {{-- @if (Auth::user()->role == 1) --}}
                             {{-- <td class="d-flex justify-content-around"><a href="#editModal{{ $lead->id }}"
                                         data-bs-toggle="modal"><i class="fa-solid fa-pencil" style="color:black;"> </i></a> --}}
-                            <a href="#deleteModal" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"
-                                    style="color:red;"></i></a>
+
+                            <div class=" d-flex justify-content-around">
+
+
+
+                                @if (Auth::user()->isAdmin == 1)
+                                    <span>
+                                        <a href="#" data-bs-toggle="modal"><i class="fa-solid fa-check"
+                                                style="color:green;"></i></a>
+                                    </span>
+                                @endif
+                                <span class="ms-auto p2">
+                                    <a href="#deleteModal" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"
+                                            style="color:red;"></i></a>
+                                </span>
+                            </div>
+
+
                         </td>
                         {{-- @endif --}}
 
@@ -167,8 +200,11 @@
 
             </tbody>
             </table>
+
             {{-- {{ $leads->links() }} --}}
         </div>
+
+
         <!-- /.card-body -->
     </div>
     <!-- /.card -->

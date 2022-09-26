@@ -202,7 +202,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
             <a href="../../index3.html" class="brand-link">
-                <img src="../../dist/img/msatlogo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+                <img src="../../dist/img/msatlogo.jpg" alt="MSU-MSAT LOGO" class="brand-image img-circle ">
                 <span class="brand-text font-weight-bold" style="color:white;">APPOINTMENT</span>
             </a>
 
@@ -313,23 +313,6 @@
         </aside>
 
         <div class="content-wrapper">
-
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Appointment Page</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                <li class="breadcrumb-item active">Appointment</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="content">
                 @yield('content')
 
@@ -373,7 +356,27 @@
 <style>
     .navbar-white {
 
-        background-color: #c0392b;
+        background-image: linear-gradient(to right, #ff512f, #dd2476);
         color: white;
     }
+
+    /* [class*=sidebar-dark-] { */
+
+    /* #43cea2 → #185a9d */
+    /* background-image: linear-gradient(to right, #ff512f, #dd2476);
+
+    color: white;
+    }
+
+    [class*=sidebar-dark] .brand-link {
+        border-bottom: 1px solid #dd2476;
+    }
+
+    [class*=sidebar-dark] .user-panel {
+        border-bottom: 1px solid #dd2476;
+    }
+
+    [class*=sidebar-dark-] .sidebar a {
+        color: white;
+    } */
 </style>

@@ -143,7 +143,9 @@
                     <span class="text-danger">
                         @error('lName')
 
-                            @if ($message == 'The l name field is required.' || $message == 'The l name format is invalid.')
+                            @if ($message == 'The l name field is required.' ||
+                                $message == 'The l name format is invalid.' ||
+                                $message == 'The l name must be at least 1+2 characters.')
                                 {{ $message = 'Please enter a valid Last Name.' }}
                             @else
                                 {{ $message }}

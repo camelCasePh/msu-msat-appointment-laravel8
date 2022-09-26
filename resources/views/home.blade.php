@@ -1,29 +1,20 @@
-{{-- @extends('layouts.app')
-
+@extends('layouts.app')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item active">Appointment</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endsection --}}
-
-@extends('layouts.app')
-@section('content')
+    </section>
     @if (Auth::user()->isAdmin == 0)
         <div class="card mt-5 ml-5 mr-5 ">
             <div class="card-header">
@@ -34,8 +25,8 @@
             </div>
             <div class="card-body  ">
                 <p>Select a Request:</p>
-                <div class="d-flex ">
-                    <div class=" justify-content-around">
+                <div class="d-flex justify-content-center ">
+                    <div class="flex-nowrap ">
                         <a class="btn btn-app ">
                             <i class="fas fa-solid fa-trash"></i>
                             Dropping of
@@ -74,7 +65,7 @@
                     </div>
 
                 </div>
-                <div class="clearfix">...</div>
+                {{-- <div class="clearfix">...</div> --}}
             </div>
 
             <style>
