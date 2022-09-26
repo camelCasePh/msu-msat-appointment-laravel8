@@ -43,7 +43,9 @@ Route::middleware(['auth'])->group(function () {
             //      Route::get('/home', function () {
             //     return view('Layout/home');
             // })->name('home');
+            //  Auth::routes();
             Route::get('/home', [HomeController::class,'index'])->name('home');
+            // Route::post('/home/store', [HomeController::class,'store'])->name('home.store');
              Route::get('/profile', [ProfileController::class,'index'])->name('profile');
               Route::get('/request', [RequestController::class,'index'])->name('request');
             //   Route::get('/logout',[AuthController::class,'logout'])->name('logout');
