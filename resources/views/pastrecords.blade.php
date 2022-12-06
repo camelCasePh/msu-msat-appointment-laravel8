@@ -2,115 +2,87 @@
 @section('css')
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 @endsection
-{{-- modal --}}
+{{-- Modal --}}
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header bg-secondary text-white">
-                <h1 class="modal-title fs-5 " id="exampleModalLabel"> <strong>Confirmation</strong> </h1>
+            {{-- <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-5">
-                <h4 class="text-center">Is this form already claimed?</h4>
+            </div> --}}
+            <div class="modal-body">
+
+                <div class="text-center mt-5">
+                    <h4>Downloading Report by:</h4>
+
+                </div>
+                <div class="row ">
+                    <div class="d-flex justify-content-evenly mt-3">
+                        <button class="btn btn-secondary ">Daily</button>
+                        <button class="btn btn-secondary ">Weekly</button>
+                        <button class="btn btn-secondary ">Monthly</button>
+                        <button class="btn btn-secondary ">Yearly</button>
+                    </div>
+
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-                <button type="button" class="btn btn-secondary">Yes</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
 
-{{-- user info modal --}}
-<!-- Button trigger modal -->
-{{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userinfoModal">
-    Launch demo modal
-</button> --}}
-
-<!-- Modal -->
-<div class="modal fade" id="userinfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{-- personal info modal --}}
+<div class="modal fade" id="personalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header bg-secondary text-white">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Personal Information</h1>
-                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body " style="background-color: #ecf0f1">
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">Name</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="Bryan Ladion" aria-label="readonly input example" readonly></div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">Email</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="camelCase.ph@gmail.com" aria-label="readonly input example" readonly>
-                    </div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class=" col-6 pl-2 pr-2 flex-fill bd-highlight">Contact No.</div>
-                    <div class=" col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="09558733688" aria-label="readonly input example" readonly></div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">ID number</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="145274" aria-label="readonly input example" readonly>
-                    </div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">Department</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="Department of Compuer Science" aria-label="readonly input example"
-                            readonly>
-                    </div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">Course</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="Computer Science" aria-label="readonly input example" readonly></div>
-
-                </div>
-                <div class="d-flex bd-highlight mb-2">
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight">Year Level</div>
-                    <div class="col-6 pl-2 pr-2 flex-fill bd-highlight"><input class="form-control bg-light"
-                            type="text" value="4" aria-label="readonly input example" readonly>
-                    </div>
-
-                </div>
-            </div>
-            {{-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            {{-- <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div> --}}
+            <div class="modal-body">
+
+                <div class="text-center mt-5">
+                    <h4>Downloading Report by:</h4>
+
+                </div>
+                <div class="row ">
+                    <div class="d-flex justify-content-evenly mt-3">
+                        <button class="btn btn-secondary ">Daily</button>
+                        <button class="btn btn-secondary ">Weekly</button>
+                        <button class="btn btn-secondary ">Monthly</button>
+                        <button class="btn btn-secondary ">Yearly</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary">Save changes</button>
+            </div>
         </div>
     </div>
 </div>
-{{-- end user info modal --}}
-{{-- end modal --}}
+{{-- end Modal --}}
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card mx-3">
                 <div class="card-header ">
-                    <h2 class="card-title mt-2"> <strong>Request</strong> </h2>
-                    <div class="d-flex justify-content-end">
-                        <div class="p-2">
-                            <span>
-                                <button class="btn btn-sm btn-secondary">Today</button>
-                            </span>
-                            <span><button class="btn btn-sm btn-secondary">Show All</button>
-                            </span>
-                        </div>
-
+                    <div class="d-flex mb-3">
+                        <div class="me-auto p-2"> <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Download Record
+                            </button></div>
+                        <div class="p-2"><button class="btn btn-sm btn-secondary">Today</button></div>
+                        <div class="p-2"><button class="btn btn-sm btn-secondary">Show All</button></div>
                     </div>
+
+
                 </div>
 
 
@@ -126,9 +98,7 @@
                                 <th>Name</th>
                                 <th>Request Form</th>
                                 <th>Request Date</th>
-                                <th>Personal Info</th>
                                 <th>Status</th>
-
                             </tr>
 
                         </thead>
@@ -142,17 +112,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
 
-                                <td>
-
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -160,15 +122,9 @@
                                 <td>COR</td>
                                 <td>12/15/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -176,27 +132,15 @@
                                 <td>COR</td>
                                 <td>12/10/21</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>tyson Ladion</td>
                                 <td>COR</td>
                                 <td>11/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -208,12 +152,6 @@
                                 <td>COR</td>
                                 <td>12/08/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -224,15 +162,9 @@
                                 <td>COR</td>
                                 <td>01/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -240,15 +172,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -256,27 +182,15 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>james Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -288,15 +202,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -304,15 +212,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -320,15 +222,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -336,15 +232,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -352,15 +242,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -368,27 +252,15 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>lol Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -400,12 +272,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -415,12 +281,6 @@
                                 <td>sam Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -432,12 +292,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -447,12 +301,6 @@
                                 <td>sam Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -464,12 +312,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -479,12 +321,6 @@
                                 <td>hello Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -496,17 +332,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        Unclaimed
-                                    </button>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -514,29 +342,15 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        Unclaimed
-                                    </button>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>Brick Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -548,21 +362,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    {{-- <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a> --}}
-
-                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        Unclaimed
-                                    </button>
-
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -570,15 +372,9 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <a href="claim-confirmation-modal" class="btn btn-success"
+                                        data-bs-toggle="modal">Claimed</i></a>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -586,11 +382,15 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
+
+                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
+                                        data-bs-toggle="modal">Unclaimed</i></a>
                                 </td>
+                            </tr>
+                            <tr data-widget="expandable-table" aria-expanded="false">
+                                <td>Bryan Ladion</td>
+                                <td>COR</td>
+                                <td>12/10/22</td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -602,12 +402,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -617,28 +411,6 @@
                                 <td>Bryan Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>Bryan Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -650,12 +422,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -665,12 +431,6 @@
                                 <td>libo Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -682,12 +442,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -698,12 +452,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -713,12 +461,6 @@
                                 <td>mike Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -730,13 +472,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -746,12 +481,6 @@
                                 <td>mike Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -763,12 +492,6 @@
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
-                                <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
                                         data-bs-toggle="modal">Unclaimed</i></a>
@@ -778,12 +501,6 @@
                                 <td>peter Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
-                                <td>
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#userinfoModal">
-                                        View
-                                    </button>
-                                </td>
                                 <td>
 
                                     <a href="claim-confirmation-modal" class="btn btn-secondary"
@@ -896,7 +613,6 @@
         border: 1px solid #b2bec3 !important;
         border-radius: 5px !important;
     }
-
 
     /* .table {
     width: 100%;

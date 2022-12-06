@@ -28,6 +28,8 @@ use Illuminate\Support\Facades\Auth;
 //     return view('/auth/login');
 // })->name('login');
 
+
+
 Route::get('/',[LoginController::class,'index']);
 Route::post('/login',[LoginController::class,'userLogin'])->name('login');
 
@@ -49,7 +51,15 @@ Route::middleware(['auth'])->group(function () {
              Route::get('/profile', [ProfileController::class,'index'])->name('profile');
               Route::get('/request', [RequestController::class,'index'])->name('request');
             //   Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+                        Route::get('/pastrecords',function(){
+                return view('pastrecords');
+            })->name('pastrecords');
+
+              Route::get('/admincalendar',function(){
+                return view('admincalendar');
+            })->name('admincalendar');
 });
+
 
 
 
