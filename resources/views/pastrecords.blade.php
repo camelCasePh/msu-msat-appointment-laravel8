@@ -113,8 +113,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -123,8 +122,7 @@
                                 <td>12/15/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-danger p-2">Unclaimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -133,208 +131,18 @@
                                 <td>12/10/21</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>tyson Ladion</td>
-                                <td>COR</td>
-                                <td>11/10/22</td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>james Ladion</td>
-                                <td>COR</td>
-                                <td>12/08/22</td>
-                                <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>peter Ladion</td>
-                                <td>COR</td>
-                                <td>01/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>watson Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>mark Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>james Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>harden Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>stephen Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>curry Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>michael Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>jackson Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>hype Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>lol Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>taeyo Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>sam Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>uncle Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>sam Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>hi Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>hello Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>barbie Ladion</td>
                                 <td>COR</td>
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -343,8 +151,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -353,8 +160,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <span class="badge rounded-pill text-bg-danger p-2">Unclaimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -363,8 +169,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -373,8 +178,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-success"
-                                        data-bs-toggle="modal">Claimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
@@ -383,128 +187,7 @@
                                 <td>12/10/22</td>
                                 <td>
 
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>Bryan Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>Bryan Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>Bryan Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>sampong Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>libo Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>ni Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>peter cayetano</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>mike Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>tyson Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>mike Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>pan Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
-                                </td>
-                            </tr>
-                            <tr data-widget="expandable-table" aria-expanded="false">
-                                <td>peter Ladion</td>
-                                <td>COR</td>
-                                <td>12/10/22</td>
-                                <td>
-
-                                    <a href="claim-confirmation-modal" class="btn btn-secondary"
-                                        data-bs-toggle="modal">Unclaimed</i></a>
+                                    <span class="badge rounded-pill text-bg-success p-2">Claimed</span>
                                 </td>
                             </tr>
 
