@@ -511,7 +511,7 @@
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>banjo Ladion</td>
-                                <td>COR</td>
+                                <td>TOR</td>
                                 <td>12/10/22</td>
                                 <td>
                                     <button type="button" class="btn btn-light" data-bs-toggle="modal"
@@ -567,7 +567,7 @@
                             </tr>
                             <tr data-widget="expandable-table" aria-expanded="false">
                                 <td>Bodt Ladion</td>
-                                <td>COR</td>
+                                <td>Diploma</td>
                                 <td>12/10/22</td>
                                 <td>
                                     <button type="button" class="btn btn-light" data-bs-toggle="modal"
@@ -871,6 +871,9 @@
     </div>
 @endsection
 @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -878,6 +881,7 @@
                 responsive: true
             });
         });
+        console.log($);
     </script>
 @endpush
 
@@ -899,9 +903,9 @@
 
 
     /* .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
-    background-color: #b2bec3 !important;
-} */
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        background-color: #b2bec3 !important;
+    } */
 </style>

@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\SlotController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,10 +55,9 @@ Route::middleware(['auth'])->group(function () {
                         Route::get('/pastrecords',function(){
                 return view('pastrecords');
             })->name('pastrecords');
-
-              Route::get('/admincalendar',function(){
-                return view('admincalendar');
-            })->name('admincalendar');
+             Route::get('/calendar', [SlotController::class,'index'])->name('admincalendar');
+              Route::get('/fetch-slots', [SlotController::class,'fetch'])->name('fetchslot');
+               Route::post('/calendar', [SlotController::class,'store'])->name('storeslot');
 });
 
 

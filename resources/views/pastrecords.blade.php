@@ -78,8 +78,8 @@
                                 data-bs-target="#exampleModal">
                                 Download Record
                             </button></div>
-                        <div class="p-2"><button class="btn btn-sm btn-secondary">Today</button></div>
-                        <div class="p-2"><button class="btn btn-sm btn-secondary">Show All</button></div>
+                        {{-- <div class="p-2"><button class="btn btn-sm btn-secondary">Today</button></div>
+                        <div class="p-2"><button class="btn btn-sm btn-secondary">Show All</button></div> --}}
                     </div>
 
 
