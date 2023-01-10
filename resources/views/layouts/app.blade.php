@@ -154,7 +154,7 @@
                                     <a href="{{ route('pastrecords') }}" class="nav-link">
                                         <i class="nav-icon fa-regular fa-calendar-check"></i>
                                         <p style="color: white;">
-                                            Records
+                                            History
                                             <span class="right badge badge-success">35</span>
                                         </p>
                                     </a>

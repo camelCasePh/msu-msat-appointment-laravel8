@@ -58,7 +58,7 @@
 </div>
 {{-- end modal --}}
 @section('content')
-    <div class="card mx-3">
+    <div class="card mx-1">
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
@@ -96,6 +96,7 @@
             //         dataType: "json",
             //         success: function(response) {
             //             console.log(response.slots)
+            // var slots = response.events;
             //         }
             //     });
             // }
@@ -103,9 +104,12 @@
 
 
             $('#calendar').fullCalendar({
+                displayEventTime: false,
+                height: 570,
                 events: slots,
                 selectable: true,
                 selectHelper: true,
+                // eventBackgroundColor: '#378006',
                 select: function(start, end, allDays) {
                     $('#slotModal').modal('toggle');
                     $('#saveBtn').click(function() {
@@ -137,6 +141,7 @@
                                     $('#slotModal').find('input').val("");
                                 }
                             },
+
                             // error: function(error) {
                             //     // if (error.responseJSON.errors) {
                             //     //     $(#title).html(error.responseJSON.errors);
@@ -146,9 +151,6 @@
 
                     });
                 }
-
-
-
 
             })
 
@@ -188,5 +190,21 @@
     .table-bordered th {
         border: 1px solid #b2bec3 !important;
         border-radius: 5px !important;
+    }
+
+    .fc-title {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+
+    .fc-event {
+        height: 50px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding: 5px;
+        align-content: center !important;
+
+        background-color: black !important;
+
     }
 </style>

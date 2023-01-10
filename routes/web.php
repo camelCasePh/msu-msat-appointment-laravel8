@@ -30,6 +30,9 @@ use Illuminate\Support\Facades\Auth;
 // })->name('login');
 
 
+  Route::get('/appointment',function(){
+    return view('appointment');
+})->name('appointment');
 
 Route::get('/',[LoginController::class,'index']);
 Route::post('/login',[LoginController::class,'userLogin'])->name('login');
@@ -58,6 +61,8 @@ Route::middleware(['auth'])->group(function () {
              Route::get('/calendar', [SlotController::class,'index'])->name('admincalendar');
               Route::get('/fetch-slots', [SlotController::class,'fetch'])->name('fetchslot');
                Route::post('/calendar', [SlotController::class,'store'])->name('storeslot');
+
+
 });
 
 

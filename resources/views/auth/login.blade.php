@@ -261,14 +261,14 @@
                       </div>
                   </form>
 
-                  <div class="social-auth-links text-center mt-2 mb-3">
+                  {{-- /* <div class="social-auth-links text-center mt-2 mb-3">
                       <a href="#" class="btn btn-block btn-primary-green">
                           <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
                       </a>
                       <a href="#" class="btn btn-block btn-darkblue">
                           <i class="fab fa-brands fa-google"></i></i> Sign in using Google
                       </a>
-                  </div>
+                  </div> */ --}}
                   <!-- /.social-auth-links -->
 
                   <p class="mb-1">

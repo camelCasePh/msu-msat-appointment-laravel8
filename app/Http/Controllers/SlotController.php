@@ -35,8 +35,10 @@ class SlotController extends Controller
 
             ];
 
-
         }
+    //          return response()->json([
+    //         'events' => $events,
+    //    ]);
 
 
         return view('admincalendar',['events' => $events]);
@@ -44,25 +46,26 @@ class SlotController extends Controller
     // public function index(){
     //     return view('admincalendar');
     // }
-    //  public function fetch(){
+    //   public function fetch(){
 
-    //      $events = array();
-    //    $slots = Slot::all();
+    //  $events = array();
+    //     $slots = Slot::all();
 
     //     foreach($slots as $slot){
     //         $events[] = [
     //             'title' => $slot->slotSize,
     //             'start' => $slot->slotStartDate,
     //             'end' => $slot->slotEndDate,
-    //            'slotStatus' => $slot->slotStatus,
+    //             'slotStatus' => $slot->slotStatus,
 
-    //             ];
+            // ];
+            ///test
 
-
-    //     }
-    //      return response()->json([
+        // }
+    //          return response()->json([
     //         'events' => $events,
-    //     ]);
+    //    ]);
+    //    return response()->json($events);
     //  }
       public function store(Request $request){
 
@@ -96,4 +99,4 @@ class SlotController extends Controller
                 return response()->json($slot);
 
      }
-}
+    }
