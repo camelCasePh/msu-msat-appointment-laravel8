@@ -427,6 +427,24 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="col-md-11">
+                                            <div>
+                                                <h5>Legend</h5>
+                                                {{-- <div style="height: 2px; background:black;"></div> --}}
+                                                <div class="d-flex flex-row ">
+                                                    <div class="px-1"
+                                                        style=" height:15px; width:15px; background:#32ff7e;  "></div>
+                                                    <div class=" px-1">
+                                                        <h6>Available</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-row ">
+                                                    <div class="px-1"
+                                                        style=" height:15px; width:15px; background:#ff3838;  "></div>
+                                                    <div class=" px-1">
+                                                        <h6>Full</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div id="calendar">
 
                                             </div>
@@ -603,6 +621,7 @@
 
             // $input1.on("input", checkInputs);
             // $input2.on("input", checkInputs);
+
             $('#calendar').fullCalendar({
 
             })

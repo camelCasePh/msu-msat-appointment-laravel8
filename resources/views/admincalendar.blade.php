@@ -17,29 +17,29 @@
 </button> --}}
 
 <!-- Modal -->
+
 <div class="modal fade" id="slotModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Calendar</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Slot</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
-                <p>If you'll select on either unavailable or holiday don't change the default value of slot number which
+                {{-- <p>If you'll select on either unavailable or holiday don't change the default value of slot number which
                     is
-                    0.</p>
+                    0.</p> --}}
                 <label for="Slot">Number of Slot</label>
-                <input type="text" class="form-control" value="0" id="slotSize">
-                <div>
+                <input type="text" class="form-control" value="50" id="slotSize">
+                {{-- <div>
                     <label for="Slot">Slot Status</label>
-                </div>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" value="Available" name="btnradio" id="btnradio1"
-                        autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1">Available</label>
+                </div> --}}
+                {{-- <div class="btn-group" role="group" aria-label="Basic radio toggle button group"> --}}
+                <input type="hidden" class="form-control" value="Available" id="slotStatus">
+                {{-- <label class="btn btn-outline-primary" for="btnradio1">Available</label> --}}
 
-                    <input type="radio" class="btn-check" value="Unavailable" name="btnradio" id="btnradio2"
+                {{-- <input type="radio" class="btn-check" value="Unavailable" name="btnradio" id="btnradio2"
                         autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio2">Unavailable</label>
 
@@ -47,7 +47,7 @@
                         autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio3">Holiday</label>
 
-                </div>
+                </div> --}}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -63,6 +63,22 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-md-11">
+                        <div>
+                            <h5>Legend</h5>
+                            {{-- <div style="height: 2px; background:black;"></div> --}}
+                            <div class="d-flex flex-row ">
+                                <div class="px-1" style=" height:15px; width:15px; background:#32ff7e;  "></div>
+                                <div class=" px-1">
+                                    <h6>Available</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row ">
+                                <div class="px-1" style=" height:15px; width:15px; background:#ff3838;  "></div>
+                                <div class=" px-1">
+                                    <h6>Full</h6>
+                                </div>
+                            </div>
+                        </div>
                         <div id="calendar">
 
                         </div>
@@ -79,6 +95,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 
     <script>
+        // $(document).ready(function() {
+
+        //     $.ajaxSetup({
+        //         headers: {
+        //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //         }
+        //     });
+
+
+
+        //     var slots = @json($events);
+
+
+        //     $('#calendar').fullCalendar({
+        //         unselectAuto: true,
+        //         unselectCancel: '.past-day',
+        //         displayEventTime: false,
+        //         height: 570,
+        //         events: slots,
+        //         selectable: true,
+        //         selectHelper: true,
+
+        // select: function(start, end, allDays) {
+        //     $('#slotModal').modal('toggle');
+        //     $('#saveBtn').click(function() {
+        //         // e.preventDefault();
+        //         var title = $('#slotSize').val();
+        //         var start_date = moment(start).format('YYYY-MM-DD');
+        //         var end_date = moment(end).format('YYYY-MM-DD');
+        //         // var slotStatus = $('input[name="btnradio"]:checked').val();
+        //         var slotStatus = $('#slotStatus').val();
+
+
+        //         $.ajax({
+        //             url: "{{ route('storeslot') }}",
+        //             type: "POST",
+        //             dataType: 'json',
+
+        //             data: {
+        //                 title,
+        //                 start_date,
+        //                 end_date,
+        //                 slotStatus
+        //             },
+        //             success: function(response) {
+
+        //                 if (response.status == 400) {
+
+        //                 } else {
+        //                     $('#slotModal').modal('hide');
+        //                     $('#slotModal').find('input').val(
+        //                         "");
+        //                 }
+        //             },
+
+
+        //         });
+
+        //     });
+        // }
+
+
+        //     })
+
+
+        // });
         $(document).ready(function() {
 
             $.ajaxSetup({
@@ -87,105 +169,107 @@
                 }
             });
 
-            // fetchstudent();
-
-            // function fetchstudent() {
-            //     $.ajax({
-            //         type: "GET",
-            //         url: "{{ route('fetchslot') }}",
-            //         dataType: "json",
-            //         success: function(response) {
-            //             console.log(response.slots)
-            // var slots = response.events;
-            //         }
-            //     });
-            // }
             var slots = @json($events);
 
-
             $('#calendar').fullCalendar({
+                unselectAuto: true,
+                unselectCancel: '.past-day',
                 displayEventTime: false,
                 height: 570,
                 events: slots,
                 selectable: true,
                 selectHelper: true,
-                // eventBackgroundColor: '#378006',
+                // select: function(start, end, allDays) {
+                //     var today = new Date();
+                //     var selectedDate = start._d;
+                //     if (selectedDate >= today) {
+                //         $('#slotModal').modal('toggle');
+                //         $('#saveBtn').click(function() {
+                //             var title = $('#slotSize').val();
+                //             var start_date = moment(start).format('YYYY-MM-DD');
+                //             var end_date = moment(end).format('YYYY-MM-DD');
+                //             var slotStatus = $('#slotStatus').val();
+
+                //             $.ajax({
+                //                 url: "{{ route('storeslot') }}",
+                //                 type: "POST",
+                //                 dataType: 'json',
+                //                 data: {
+                //                     title,
+                //                     start_date,
+                //                     end_date,
+                //                     slotStatus
+                //                 },
+                //                 success: function(response) {
+                //                     if (response.status == 400) {
+                //                         // handle error
+                //                     } else {
+                //                         $('#slotModal').modal('hide');
+                //                         $('#slotModal').find('input').val("");
+                //                     }
+                //                 }
+                //             });
+                //         });
+                //     }
+                // }
                 select: function(start, end, allDays) {
-                    $('#slotModal').modal('toggle');
-                    $('#saveBtn').click(function() {
-                        // e.preventDefault();
-                        var title = $('#slotSize').val();
-                        var start_date = moment(start).format('YYYY-MM-DD');
-                        var end_date = moment(end).format('YYYY-MM-DD');
-                        var slotStatus = $('input[name="btnradio"]:checked').val();
+                    var selectedDate = moment(start);
+                    if (selectedDate.day() === 0 || selectedDate.day() === 6) {
+                        return false;
+                    } else {
+                        $('#slotModal').modal('toggle');
+                        $('#saveBtn').click(function() {
+                            // e.preventDefault();
+                            var title = $('#slotSize').val();
+                            var start_date = moment(start).format('YYYY-MM-DD');
+                            var end_date = moment(end).format('YYYY-MM-DD');
+                            // var slotStatus = $('input[name="btnradio"]:checked').val();
+                            var slotStatus = $('#slotStatus').val();
 
 
-                        $.ajax({
-                            url: "{{ route('storeslot') }}",
-                            type: "POST",
-                            dataType: 'json',
-                            // contentType: "application/json; charset=utf-8",
-                            data: {
-                                title,
-                                start_date,
-                                end_date,
-                                slotStatus
-                            },
-                            success: function(response) {
-                                // alert(response)
-                                // console.log(response)
-                                if (response.status == 400) {
+                            $.ajax({
+                                url: "{{ route('storeslot') }}",
+                                type: "POST",
+                                dataType: 'json',
 
-                                } else {
-                                    $('#slotModal').modal('hide');
-                                    $('#slotModal').find('input').val("");
-                                }
-                            },
+                                data: {
+                                    title,
+                                    start_date,
+                                    end_date,
+                                    slotStatus
+                                },
+                                success: function(response) {
 
-                            // error: function(error) {
-                            //     // if (error.responseJSON.errors) {
-                            //     //     $(#title).html(error.responseJSON.errors);
-                            //     // }
-                            // },
+                                    if (response.status == 400) {
+
+                                    } else {
+                                        $('#slotModal').modal('hide');
+                                        $('#slotModal').find('input').val("");
+                                    }
+                                },
+
+
+                            });
+
                         });
-
-                    });
+                    }
+                },
+                dayRender: function(date, cell) {
+                    var currentDate = new Date();
+                    if (date < currentDate) {
+                        $(cell).addClass('past-day');
+                        $(cell).click(function(e) {
+                            e.preventDefault();
+                            return false;
+                        });
+                    }
                 }
-
-            })
-
+            });
         });
-
-        // function fetchslot() {
-        //     $.ajax({
-        //         type: "GET",
-        //         url: "/fetch-slots",
-        //         dataType: "json",
-        //         success: function(response) {
-        //             console.log(response.slots);
-        //         }
-        //     });
-        // }
-
-        // $.ajaxSetup({
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //     }
-        // });
     </script>
 @endpush
 
 <style>
-    /* .card-header {
-        background-color: #ecf0f1 !important;
-
-    }
-
-
-    .card {
-        background-color: #ecf0f1 !important;
-    } */
-
     .table-bordered td,
     .table-bordered th {
         border: 1px solid #b2bec3 !important;
@@ -203,8 +287,13 @@
         flex-wrap: wrap !important;
         padding: 5px;
         align-content: center !important;
+        border: 1px solid #32ff7e !important;
+        background-color: #32ff7e !important;
 
-        background-color: black !important;
+    }
 
+    .past-day {
+        pointer-events: none;
+        background-color: #ddd;
     }
 </style>

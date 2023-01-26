@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css?v=3.2.0') }}">
     <script src="https://kit.fontawesome.com/612e1c7b76.js" crossorigin="anonymous"></script>
 
-    <script nonce="75fed223-4b53-49eb-b0b3-5ee3409dd016">
+    {{-- <script nonce="75fed223-4b53-49eb-b0b3-5ee3409dd016">
         (function(w, d) {
             ! function(a, e, t, r) {
                 a.zarazData = a.zarazData || {};
@@ -79,7 +79,7 @@
                     "DOMContentLoaded", zaraz.init)
             }(w, d, 0, "script");
         })(window, document);
-    </script>
+    </script> --}}
 </head>
 
 <body class="hold-transition sidebar-mini">
