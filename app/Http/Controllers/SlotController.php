@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\Slot;
 use Illuminate\Http\Request;
-
 class SlotController extends Controller
 {
     /**
@@ -61,7 +60,7 @@ class SlotController extends Controller
                                        $slot->slotStatus = $request->input('slotStatus');
                                        $slot->save();
 
-                // return response()->json($slot);
+                return response()->json($slot);
         //          $events= Slot::select('slotSize as title', 'slotStartDate as start', 'slotEndDate as end', 'slotStatus as description')->get();
         // return response()->json($events);
 
