@@ -265,9 +265,8 @@
                         <div class="d-flex bd-highlight mb-2 mt-3">
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight">Name</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
-
                                 <input class="form-control bg-light" type="text"
-                                    aria-label="readonly input example" id="name" name="name">
+                                    aria-label="readonly input example" id="userName" name="name">
                             </div>
 
                         </div>
@@ -309,11 +308,11 @@
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">Department</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
                                 <input class="form-control bg-light" type="text"
-                                    aria-label="readonly input example" id="department" name="departments" readonly>
+                                    aria-label="readonly input example" id="department" name="department" readonly>
                             </div>
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    id="dropdownMenuButton" data-bs-auto-close="outside" data-toggle="dropdown"
+                                    id="dropdownMenuButton" data-bs-auto-close="true" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     Select Department
                                 </button>
@@ -343,7 +342,7 @@
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">Year Level</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
                                 <input class="form-control bg-light" type="text"
-                                    aria-label="readonly input example" id="yearLevel" name="ye">
+                                    aria-label="readonly input example" id="yearLevel" name="yearLevel">
                             </div>
 
                         </div>
@@ -508,6 +507,8 @@
         $(document).ready(function() {
             $("#exampleModal").modal('show');
             $(".page2").hide();
+            $(".next2").hide();
+            $(".next3").hide();
             $(".page3").hide();
             $(".page4").hide();
             $(".page5").hide();
@@ -516,15 +517,6 @@
             $(".tracker").hide();
             $("#invalidEmail").hide();
             $("#invalidNumber").hide();
-
-            // $(".choice").click(function() {
-            //     // Get the value of the clicked choice
-            //     var choiceValue = $(this).data("value");
-
-            //     // Put the value in the input field
-            //     $("#yearLevel").val(choiceValue);
-            // });
-
 
             $('#dropdownMenuButton').on('click', function() {
                 $('.dropdown-menu').toggle();
@@ -543,14 +535,7 @@
             $(".tutorial").click(function() {
                 $("#exampleModal").modal('show');
             })
-            // $("#dropdownMenuButton").click(function() {
-            //     $("dropdown-menu").show();
-            // })
 
-
-
-
-            // $(document).ready(function() {
             $("#shiftingForm, #inc, #addSubject, #cor, #dropSubject").change(function() {
                 if ($("#shiftingForm").prop("checked") || $("#inc").prop("checked") || $("#addSubject")
                     .prop("checked") || $("#cor").prop("checked") || $("#dropSubject").prop("checked")) {
@@ -560,25 +545,23 @@
 
                 }
             });
-            $("#shiftingForm, #inc, #addSubject, #cor, #dropSubject").change(function() {
-                if ($("#shiftingForm").prop("checked") || $("#inc").prop("checked") || $("#addSubject")
-                    .prop("checked") || $("#cor").prop("checked") || $("#dropSubject").prop("checked")) {
+            $("#honorableDismissal, #tor, #formonethreeseven").change(function() {
+                if ($("#honorableDismissal").prop("checked") || $("#tor").prop("checked") || $(
+                        "#formonethreeseven").prop("checked")) {
                     $('.gradProceedBtn').show();
                 } else {
                     $('.gradProceedBtn').hide();
 
                 }
             });
-            //     $('input[type="checkbox"]').change(function() {
-            //         if ($('input[type="checkbox"]:checked').length > 0) {
-            //             $('.next').show();
-            //         } else {
-            //             $('.next').hide();
-            //         }
-            //     });
-            // });
+
 
             $(".undergradProceedBtn").click(function() {
+                $(".page1").fadeOut(500);
+                $(".page2").fadeIn();
+
+            })
+            $(".gradProceedBtn").click(function() {
                 $(".page1").fadeOut(500);
                 $(".page2").fadeIn();
 
@@ -589,8 +572,56 @@
                 $(".page1").fadeIn();
 
             })
+            // $("#name, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel").change("input",
+            //     function() {
+            //         if ($("#name").val() != "" && $("#email-input").val() != "" && $("#contactNo").val() !=
+            //             "" && $("#idNumber").val() != "" && $("#department").val() != "" && $("#course")
+            //             .val() != "" && $("#yearLevel").val() != "") {
+            //             $("#next2").show();
+            //         } else {
+            //             $("#next2").hide();
+            //         }
+            //     });
+            // $("#name, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel").on("input",
+            //     function() {
+            //         if ($("#name").val().length > 0 && $("#email-input").val().length > 0 && $("#contactNo")
+            //             .val().length > 0 && $("#idNumber").val().length > 0 && $("#department").val().length >
+            //             0 && $("#course").val().length > 0 && $("#yearLevel").val().length > 0) {
+            //             $(".next2").show();
+            //         } else {
+            //             $(".next2").hide();
+            //         }
+            //     });
+
+            $("#userName, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel").on("input",
+                function() {
+                    if ($("#userName").val().length > 0 && $("#email-input").val().length > 0 && $("#contactNo")
+                        .val().length > 0 && $("#idNumber").val().length > 0 && $("#department").val().length >
+                        0 && $("#course").val().length > 0 && $("#yearLevel").val().length > 0) {
+                        console.log("show button");
+                        $(".next2").show();
+                    } else {
+                        console.log("hide button");
+                        $(".next2").hide();
+                    }
+
+                });
+            // #yearLvl, #semester
+            $("#yearLvl, #semester").on("input",
+                function() {
+                    if ($("#yearLvl").val().length > 0 && $("#semester").val().length > 0) {
+
+                        $(".next3").show();
+                    } else {
+                        console.log("hide button");
+                        $(".next3").hide();
+                    }
+
+                });
+
+
             $(".next2").click(function() {
-                $(".page1").hide();
+                // $(".page1").hide();
                 $(".page2").fadeOut(500);
                 $(".page3").fadeIn();
 
@@ -621,40 +652,39 @@
 
 
 
-            function createInterval(i, code) {
-                var count = 0;
-                return setInterval(function() {
-                    count++;
-                    code();
-                    console.log("Interval " + i + ": " + count);
-                }, 1000);
-            }
+            // function createInterval(i, code) {
+            //     var count = 0;
+            //     return setInterval(function() {
+            //         count++;
+            //         code();
+            //         console.log("Interval " + i + ": " + count);
+            //     }, 1000);
+            // }
 
-            var interval1 = createInterval(1, function() {
-                if ($(
-                        "#name, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel"
-                    )
-                    .filter(
-                        function() {
-                            return !this.value;
-                        }).length === 0) {
-                    $(".next2").show();
+            // var interval1 = createInterval(1, function() {
+            //     if ($("#name, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel")
+            //         .filter(
+            //             function() {
+            //                 return !this.value;
+            //             }).length === 0) {
+            //         $(".next2").show();
 
-                } else {
-                    $(".next2").hide();
-                }
-            });
-            var interval2 = createInterval(1, function() {
-                if ($("#yearLvl, #semester").filter(
-                        function() {
-                            return !this.value;
-                        }).length === 0) {
-                    $(".next3").show();
+            //     } else {
+            //         $(".next2").hide();
+            //     }
+            // });
 
-                } else {
-                    $(".next3").hide();
-                }
-            });
+            // var interval2 = createInterval(1, function() {
+            //     if ($("#yearLvl, #semester").filter(
+            //             function() {
+            //                 return !this.value;
+            //             }).length === 0) {
+            //         $(".next3").show();
+
+            //     } else {
+            //         $(".next3").hide();
+            //     }
+            // });
 
             $('#calendar').fullCalendar({
 
@@ -666,7 +696,7 @@
                 var pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
                 if (!pattern.test($(this).val())) {
                     $("#invalidEmail").show();
-                    // $(".next2").hide();
+
                 } else {
                     $("#invalidEmail").hide();
                 }
@@ -684,7 +714,7 @@
                     $("#invalidNumber").hide();
 
                 } else {
-                    // $(".next2").hide();
+
                     $("#invalidNumber").show();
                 }
             });
@@ -697,30 +727,30 @@
 
             //END OF HANDLING A DROPDOWN
             // tracker page
-            $("#track").click(function() {
-                $(".appointment").fadeOut(500);
-                $(".tracker").fadeIn();
+            // $("#track").click(function() {
+            //     $(".appointment").fadeOut(500);
+            //     $(".tracker").fadeIn();
 
 
-                $("#appointmentbtn").click(function() {
-                    $(".tracker").fadeOut(500);
-                    $(".appointment").fadeIn();
-                })
+            //     $("#appointmentbtn").click(function() {
+            //         $(".tracker").fadeOut(500);
+            //         $(".appointment").fadeIn();
+            //     })
 
-                $(".btnTrack").hide();
+            //     $(".btnTrack").hide();
 
 
 
-                $("#transNum").on("input", function() {
-                    if ($(this).val() && $.isNumeric($(this).val())) {
-                        // do something if the input field has a value and the value is a number
-                        $(".btnTrack").show();
-                    } else {
-                        // do something if the input field is empty or the value is not a number
-                        $(".btnTrack").hide();
-                    }
-                });
-            })
+            //     $("#transNum").on("input", function() {
+            //         if ($(this).val() && $.isNumeric($(this).val())) {
+            //             // do something if the input field has a value and the value is a number
+            //             $(".btnTrack").show();
+            //         } else {
+            //             // do something if the input field is empty or the value is not a number
+            //             $(".btnTrack").hide();
+            //         }
+            //     });
+            // })
 
 
 
