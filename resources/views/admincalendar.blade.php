@@ -95,72 +95,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 
     <script>
-        // $(document).ready(function() {
-
-        //     $.ajaxSetup({
-        //         headers: {
-        //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //         }
-        //     });
-
-
-
-        //     var slots = @json($events);
-
-
-        //     $('#calendar').fullCalendar({
-        //         unselectAuto: true,
-        //         unselectCancel: '.past-day',
-        //         displayEventTime: false,
-        //         height: 570,
-        //         events: slots,
-        //         selectable: true,
-        //         selectHelper: true,
-
-        // select: function(start, end, allDays) {
-        //     $('#slotModal').modal('toggle');
-        //     $('#saveBtn').click(function() {
-        //         // e.preventDefault();
-        //         var title = $('#slotSize').val();
-        //         var start_date = moment(start).format('YYYY-MM-DD');
-        //         var end_date = moment(end).format('YYYY-MM-DD');
-        //         // var slotStatus = $('input[name="btnradio"]:checked').val();
-        //         var slotStatus = $('#slotStatus').val();
-
-
-        //         $.ajax({
-        //             url: "{{ route('storeslot') }}",
-        //             type: "POST",
-        //             dataType: 'json',
-
-        //             data: {
-        //                 title,
-        //                 start_date,
-        //                 end_date,
-        //                 slotStatus
-        //             },
-        //             success: function(response) {
-
-        //                 if (response.status == 400) {
-
-        //                 } else {
-        //                     $('#slotModal').modal('hide');
-        //                     $('#slotModal').find('input').val(
-        //                         "");
-        //                 }
-        //             },
-
-
-        //         });
-
-        //     });
-        // }
-
-
-        //     })
-
-
-        // });
         $(document).ready(function() {
 
             $.ajaxSetup({
@@ -179,59 +113,22 @@
                 events: slots,
                 selectable: true,
                 selectHelper: true,
-                // select: function(start, end, allDays) {
-                //     var today = new Date();
-                //     var selectedDate = start._d;
-                //     if (selectedDate >= today) {
-                //         $('#slotModal').modal('toggle');
-                //         $('#saveBtn').click(function() {
-                //             var title = $('#slotSize').val();
-                //             var start_date = moment(start).format('YYYY-MM-DD');
-                //             var end_date = moment(end).format('YYYY-MM-DD');
-                //             var slotStatus = $('#slotStatus').val();
 
-                //             $.ajax({
-                //                 url: "{{ route('storeslot') }}",
-                //                 type: "POST",
-                //                 dataType: 'json',
-                //                 data: {
-                //                     title,
-                //                     start_date,
-                //                     end_date,
-                //                     slotStatus
-                //                 },
-                //                 success: function(response) {
-                //                     if (response.status == 400) {
-                //                         // handle error
-                //                     } else {
-                //                         $('#slotModal').modal('hide');
-                //                         $('#slotModal').find('input').val("");
-                //                     }
-                //                 }
-                //             });
-                //         });
-                //     }
-                // }
                 select: function(start, end, allDays) {
-                    var selectedDate = moment(start);
-                    if (selectedDate.day() === 0 || selectedDate.day() === 6) {
-                        return false;
-                    } else {
+                    var today = new Date();
+                    var selectedDate = start._d;
+                    if (selectedDate >= today) {
                         $('#slotModal').modal('toggle');
                         $('#saveBtn').click(function() {
-                            // e.preventDefault();
                             var title = $('#slotSize').val();
                             var start_date = moment(start).format('YYYY-MM-DD');
                             var end_date = moment(end).format('YYYY-MM-DD');
-                            // var slotStatus = $('input[name="btnradio"]:checked').val();
                             var slotStatus = $('#slotStatus').val();
-
 
                             $.ajax({
                                 url: "{{ route('storeslot') }}",
                                 type: "POST",
                                 dataType: 'json',
-
                                 data: {
                                     title,
                                     start_date,
@@ -239,18 +136,14 @@
                                     slotStatus
                                 },
                                 success: function(response) {
-
                                     if (response.status == 400) {
-
+                                        // handle error
                                     } else {
                                         $('#slotModal').modal('hide');
                                         $('#slotModal').find('input').val("");
                                     }
-                                },
-
-
+                                }
                             });
-
                         });
                     }
                 },
@@ -264,6 +157,7 @@
                         });
                     }
                 }
+
             });
         });
     </script>

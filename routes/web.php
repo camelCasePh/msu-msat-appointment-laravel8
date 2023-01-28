@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function () {
                 return view('pastrecords');
             })->name('pastrecords');
              Route::get('/calendar', [SlotController::class,'index'])->name('admincalendar');
-              Route::get('/fetch-slots', [SlotController::class,'fetch'])->name('fetchslot');
+              Route::get('/calendar/fetch', [SlotController::class,'fetch'])->name('fetch');
                Route::post('/calendar', [SlotController::class,'store'])->name('storeslot');
 
 

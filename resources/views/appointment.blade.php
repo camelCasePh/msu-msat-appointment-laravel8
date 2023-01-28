@@ -23,72 +23,9 @@
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css?v=3.2.0') }}">
     <script src="https://kit.fontawesome.com/612e1c7b76.js" crossorigin="anonymous"></script>
 
-    {{-- <script nonce="75fed223-4b53-49eb-b0b3-5ee3409dd016">
-        (function(w, d) {
-            ! function(a, e, t, r) {
-                a.zarazData = a.zarazData || {};
-                a.zarazData.executed = [];
-                a.zaraz = {
-                    deferred: [],
-                    listeners: []
-                };
-                a.zaraz.q = [];
-                a.zaraz._f = function(e) {
-                    return function() {
-                        var t = Array.prototype.slice.call(arguments);
-                        a.zaraz.q.push({
-                            m: e,
-                            a: t
-                        })
-                    }
-                };
-                for (const e of ["track", "set", "debug"]) a.zaraz[e] = a.zaraz._f(e);
-                a.zaraz.init = () => {
-                    var t = e.getElementsByTagName(r)[0],
-                        z = e.createElement(r),
-                        n = e.getElementsByTagName("title")[0];
-                    n && (a.zarazData.t = e.getElementsByTagName("title")[0].text);
-                    a.zarazData.x = Math.random();
-                    a.zarazData.w = a.screen.width;
-                    a.zarazData.h = a.screen.height;
-                    a.zarazData.j = a.innerHeight;
-                    a.zarazData.e = a.innerWidth;
-                    a.zarazData.l = a.location.href;
-                    a.zarazData.r = e.referrer;
-                    a.zarazData.k = a.screen.colorDepth;
-                    a.zarazData.n = e.characterSet;
-                    a.zarazData.o = (new Date).getTimezoneOffset();
-                    a.zarazData.q = [];
-                    for (; a.zaraz.q.length;) {
-                        const e = a.zaraz.q.shift();
-                        a.zarazData.q.push(e)
-                    }
-                    z.defer = !0;
-                    for (const e of [localStorage, sessionStorage]) Object.keys(e || {}).filter((a => a.startsWith(
-                        "_zaraz_"))).forEach((t => {
-                        try {
-                            a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t))
-                        } catch {
-                            a.zarazData["z_" + t.slice(7)] = e.getItem(t)
-                        }
-                    }));
-                    z.referrerPolicy = "origin";
-                    z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData)));
-                    t.parentNode.insertBefore(z, t)
-                };
-                ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener(
-                    "DOMContentLoaded", zaraz.init)
-            }(w, d, 0, "script");
-        })(window, document);
-    </script> --}}
+
 </head>
 
-
-{{-- modal --}}
-<!-- Button trigger modal -->
-{{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-</button> --}}
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -101,31 +38,31 @@
             <div class="modal-body">
                 <h5>1.Select a document to claim.</h5>
                 <div class="pl-3 pr-2">
-                    <img src="../../dist/img/selectform.png" width="700px">
+                    <img src="../../dist/img/selectform.png" id="tutimg">
 
                 </div>
 
                 <br>
                 <h5>2. Input your personal information </h5>
                 <div class="pl-3 pr-2">
-                    <img src="../../dist/img/inputpersonalinfo.png" width="700px">
+                    <img src="../../dist/img/inputpersonalinfo.png" width="700px" id="tutimg">
 
                 </div>
                 <br>
                 <h5>3. Input year level and semester </h5>
                 <div class="pl-3 pr-2">
-                    <img src="../../dist/img/step2.png" width="700px">
+                    <img src="../../dist/img/step2.png" width="700px" id="tutimg">
 
                 </div>
                 <br>
                 <h5>4. Select appointment date </h5>
                 <div class="pl-3 pr-2">
-                    <img src="../../dist/img/step3.png" width="700px">
+                    <img src="../../dist/img/step3.png" width="700px" id="tutimg">
 
                 </div>
                 <h5>5. Review request </h5>
                 <div class="pl-3 pr-2">
-                    <img src="../../dist/img/reviewform.png" width="700px">
+                    <img src="../../dist/img/reviewform.png" width="700px" id="tutimg">
 
                 </div>
 
@@ -138,7 +75,7 @@
 {{-- end modal --}}
 
 <body>
-    <header class="head d-flex flex-row mb-2 pt-2 pb-2 text-white">
+    <header class="head d-flex flex-row  pt-4 pb-2 text-white">
 
 
 
@@ -149,152 +86,174 @@
 
 
         <div class="d-flex align-items-start flex-column pb-2">
-            <strong style="font-size: 20px">Msu-Msat Online Appointment</strong>
+            <strong style="font-size: 30px">Msu-Msat Online Appointment</strong>
             <div class="ts-12">Maigo, Lanao del Norte</div>
         </div>
         <div class="ms-auto d-flex  justify-content-end flex-row bd-highlight right-navigation mr-5">
-            <div class="p-2 bd-highlight"> <button>Contact</button> </div>
-            <div class="p-2 bd-highlight"> <button>About</button></div>
-            <div class="p-2 bd-highlight"> <button class="tutorial">How to make Appointment</button></div>
+            <div class="p-2 bd-highlight"> <button class="nav fs-5" id="appointmentbtn">Home</button> </div>
+            <div class="p-2 bd-highlight"> <button class="nav fs-5" id="track">Track</button> </div>
+            <div class="p-2 bd-highlight"> <button class="nav fs-5">Contact</button> </div>
+            <div class="p-2 bd-highlight"> <button class="nav fs-5">About</button></div>
+            <div class="p-2 bd-highlight"> <button class="nav tutorial fs-5">How to make Appointment</button></div>
         </div>
 
     </header>
     <section>
+        <div id="carouselExampleIndicators" class=" position-relative page1 carousel carousel-fade slide darken"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../dist/img/maigo.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../dist/img/maigo2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../dist/img/maigo3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            {{-- end of carousel --}}
+            <div class="d-flex bd-highlight m-4 tracker-searchbar position-absolute top-0 end-0 translate-middle-y">
+
+
+                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
+
+                    <input class="form-control bg-light" type="text" aria-label="readonly input example"
+                        placeholder="e.g 001-001" id="name" name="name">
+                </div>
+                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight">
+                    <button class=" trackerBtn btn text-white">Track</button>
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-5">
-                    <div class="page1">
+                    <div class="appointment">
 
+                        <div class="page1 px-5">
 
-                        <div id="carouselExampleIndicators" class="carousel carousel-fade slide"
-                            data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../../dist/img/maigo.jpg" class="d-block w-100" alt="...">
+                            <h3 class="my-2"> <strong>MAKE APPOINTMENT FOR:</strong></h3>
+                            <div class="card card-page1">
+                                <div class="card-header card-header-page1 fs-6">
+                                    <strong>Undergraduate Student Requests Documents</strong>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../../dist/img/maigo2.jpg" class="d-block w-100" alt="...">
+                                <div class="card-body">
+                                    {{-- chexbox button for undergrad --}}
+                                    <div class="d-flex align-content-start flex-wrap my-4 btn-group " role="group"
+                                        aria-label="Basic checkbox toggle button group">
+
+                                        <input type="checkbox" class="btn-check documents-btn" id="shiftingForm"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="shiftingForm">SHIFTING FORM</label>
+
+                                        <input type="checkbox" class="btn-check documents-btn" id="inc"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="inc">COMPLETION OF INC GRADE</label>
+
+                                        <input type="checkbox" class="btn-check documents-btn" id="addSubject"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="addSubject">ADDING OF SUBJECT</label>
+                                        <input type="checkbox" class="btn-check documents-btn" id="cor"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="cor">COR</label>
+                                        <input type="checkbox" class="btn-check documents-btn" id="dropSubject"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="dropSubject">DROPPING OF SUBJECT</label>
+
+
+                                    </div>
+
+                                    <div class="d-flex flex-row">
+
+                                        <div class="ms-auto">
+                                            <button type="button"
+                                                class="undergradProceedBtn btn btn-secondary btn-lg">Proceed</button>
+                                        </div>
+                                    </div>
+                                    {{-- end of checkbox button for undergrad --}}
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../../dist/img/maigo3.jpg" class="d-block w-100" alt="...">
+                                {{-- end of card --}}
+                            </div>
+                            <div class="card card-page1">
+                                <div class="card-header card-header-page1 fs-6">
+                                    <strong>Graduate Student Requests Documents</strong>
                                 </div>
+                                <div class="card-body">
+                                    {{-- check box button for graduate --}}
+
+                                    <div class="d-flex align-content-start flex-wrap my-4 btn-group" role="group"
+                                        aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check documents-btn"
+                                            id="honorableDismissal" autocomplete="off">
+                                        <label
+                                            class=" text-wrap btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="honorableDismissal">HONORABLE DISMISSAL</label>
+
+                                        <input type="checkbox" class="btn-check documents-btn" id="tor"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="tor">TOR</label>
+
+                                        <input type="checkbox" class="btn-check documents-btn" id="formonethreeseven"
+                                            autocomplete="off">
+                                        <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            for="formonethreeseven">FORM 137</label>
+
+
+                                    </div>
+                                    {{-- end of check box button for graduate --}}
+
+
+                                    <div class="d-flex flex-row">
+                                        <div class="ms-auto">
+                                            <button type="button"
+                                                class="gradProceedBtn btn btn-secondary btn-lg">Proceed</button>
+                                        </div>
+                                    </div>
+                                    {{-- end of card body --}}
+                                </div>
+                                {{-- end of card --}}
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                            {{-- end of carousel --}}
+
+
+
+                            {{-- </div> --}}
+
+                            {{-- end of card --}}
                         </div>
-
-                        <h1 class="my-2"> <strong>Make Appointment for</strong></h1>
-
-                        <h3> Undergraduate Student Requests forms</h3>
-                        <div style="height: 2px; background:black;"></div>
-
-
-
-                        {{-- chexbox button for undergrad --}}
-                        <div class="d-flex align-content-start flex-wrap my-4 btn-group documents-btn" role="group"
-                            aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check documents-btn" id="honorableDismissal"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="honorableDismissal">HONORABLE DISMISSAL</label>
-
-                            <input type="checkbox" class="btn-check documents-btn" id="shiftingForm"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="shiftingForm">SHIFTING FORM</label>
-
-                            <input type="checkbox" class="btn-check documents-btn" id="inc"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="inc">COMPLETION OF INC GRADE</label>
-
-                            <input type="checkbox" class="btn-check documents-btn" id="addSubject"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="addSubject">ADDING OF SUBJECT</label>
-                            <input type="checkbox" class="btn-check documents-btn" id="cor"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="cor">COR</label>
-                            <input type="checkbox" class="btn-check documents-btn" id="dropSubject"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="dropSubject">DROPPING OF SUBJECT</label>
-
-
-                        </div>
-                        {{-- end of checkbox button for undergrad --}}
-
-
-
-                        <h3> Graduate Student Requests forms</h3>
-                        <div style="height: 2px; background:black;"></div>
-
-
-                        {{-- radio buttons --}}
-                        {{-- <div class=" d-flex align-content-start flex-wrap my-4 btn-group documents-btn" role="group"
-                            aria-label="Basic radio toggle button group">
-
-
-                            <input type="radio" class="btn-check  documents-btn" name="btnradio" id="btnradio7"
-                                autocomplete="off">
-                            <label class="rounded documents-btn btn btn-outline-secondary m-1 p-5 fs-6 "
-                                for="btnradio7">TOR</label>
-                            <input type="radio" class="btn-check  documents-btn" name="btnradio" id="btnradio8"
-                                autocomplete="off">
-                            <label class="rounded documents-btn btn btn-outline-secondary m-1 p-5 fs-6"
-                                for="btnradio8">FORM
-                                137</label>
-                        </div> --}}
-                        {{-- checkbox button for graduate --}}
-                        <div class="d-flex align-content-start flex-wrap my-4 btn-group documents-btn" role="group"
-                            aria-label="Basic checkbox toggle button group">
-                            <input type="checkbox" class="btn-check documents-btn" id="tor"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="tor">TOR</label>
-
-                            <input type="checkbox" class="btn-check documents-btn" id="formonethreeseven"
-                                autocomplete="off">
-                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
-                                for="formonethreeseven">FORM 137</label>
-
-
-                        </div>
-                        {{-- end of check box button for graduate --}}
-                        <div class="d-flex flex-row">
-
-                            <div class="ms-auto">
-                                <button type="button" class="next btn btn-secondary btn-lg">Next</button>
-                            </div>
-                        </div>
-
-
-                        {{-- </div> --}}
-
-
                         {{-- end of page 1 --}}
                     </div>
 
-                    <div class="page2">
-                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request Form
+                    <div class="card p-5 page2">
+                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request
+                            Form
                         </h1>
                         <div>
                             <img src="../../dist/img/step1.png">
@@ -316,9 +275,13 @@
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">Email</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
                                 <input class="form-control bg-light" type="email"
-                                    aria-label="readonly input example" id="email" name="email">
+                                    aria-label="readonly input example" id="email-input" name="email">
                             </div>
 
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="invalidEmail">
+                            Hi, before proceeding please make sure, your email is active and valid, because it will
+                            be used for sending notifications about your appointment.
                         </div>
                         <div class="d-flex bd-highlight mb-2">
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">Contact no.</div>
@@ -328,6 +291,11 @@
                             </div>
 
                         </div>
+                        <div class="alert alert-danger" role="alert" id="invalidNumber">
+                            Hi, before proceeding please make sure, your Phone number is active and valid, because
+                            it will
+                            be used for sending notifications about your appointment </div>
+
                         <div class="d-flex bd-highlight mb-2">
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">ID Number</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
@@ -341,9 +309,25 @@
                             <div class="col-3 pl-2 pr-2 flex-fill bd-highlight fs-5">Department</div>
                             <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
                                 <input class="form-control bg-light" type="text"
-                                    aria-label="readonly input example" id="department" name="departments">
+                                    aria-label="readonly input example" id="department" name="departments" readonly>
                             </div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-bs-auto-close="outside" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Select Department
+                                </button>
 
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="dropdown-item">Computer Science</li>
+                                    <li class="dropdown-item">Education</li>
+                                    <li class="dropdown-item">Industrial Technology</li>
+                                    <li class="dropdown-item">Senior High School</li>
+                                    <li class="dropdown-item">Junior High School</li>
+
+
+                                </div>
+                            </div>
                         </div>
 
                         <div class="d-flex bd-highlight mb-2">
@@ -363,8 +347,9 @@
                             </div>
 
                         </div>
-                        <div class="d-flex flex-row">
 
+
+                        <div class="d-flex flex-row">
                             <button type="button" class="backto1 btn btn-secondary btn-lg">Back</button>
 
                             <div class="ms-auto">
@@ -374,8 +359,9 @@
                         {{-- end of page 2 --}}
                     </div>
 
-                    <div class="page3">
-                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request Form
+                    <div class="card p-5 page3">
+                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request
+                            Form
                         </h1>
                         <div>
                             <img src="../../dist/img/step22.png">
@@ -413,8 +399,9 @@
                         {{-- end of page 3 --}}
                     </div>
 
-                    <div class="page4">
-                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request Form
+                    <div class="card p-5 page4">
+                        <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request
+                            Form
                         </h1>
                         <div>
                             {{-- <img src="../../dist/img/step22.png"> --}}
@@ -432,14 +419,16 @@
                                                 {{-- <div style="height: 2px; background:black;"></div> --}}
                                                 <div class="d-flex flex-row ">
                                                     <div class="px-1"
-                                                        style=" height:15px; width:15px; background:#32ff7e;  "></div>
+                                                        style=" height:15px; width:15px; background:#32ff7e;  ">
+                                                    </div>
                                                     <div class=" px-1">
                                                         <h6>Available</h6>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row ">
                                                     <div class="px-1"
-                                                        style=" height:15px; width:15px; background:#ff3838;  "></div>
+                                                        style=" height:15px; width:15px; background:#ff3838;  ">
+                                                    </div>
                                                     <div class=" px-1">
                                                         <h6>Full</h6>
                                                     </div>
@@ -466,14 +455,37 @@
                         </div>
                         {{-- end of page 4 --}}
                     </div>
-                    <div class="page5">
-
+                    <div class="card p-5 page5">
+                        {{-- end of page 5 --}}
                     </div>
-                    {{-- end of col dev --}}
+                    {{-- end of appointment --}}
                 </div>
-                {{-- end of row dev --}}
+                <div class="tracker">
+                    <div class="card  " style="height:100vh">
+
+                        <div class="d-flex  justify-content-center pt-5 mt-5 ">
+                            <div class="fs-5 mt-5">Transaction
+                                Number:
+                            </div>
+                            <div class="col-6 mt-5">
+                                <input class="form-control bg-light" type="text"
+                                    aria-label="readonly input example" id="transNum" name="transactionNumber">
+                            </div>
+
+                        </div>
+
+                        {{-- <button
+                                class="btn btn-lg  btnTrack position-absolute top-50 start-50 translate-middle">Track</button> --}}
+                        <div class="d-flex justify-content-center mt-2">
+                            <button type="button " class=" col-2 btn btn-danger btnTrack">Track</button>
+                        </div>
+                    </div>
+                </div>
+                {{-- end of col dev --}}
             </div>
-            {{-- end of container dev --}}
+            {{-- end of row dev --}}
+        </div>
+        {{-- end of container dev --}}
         </div>
 
     </section>
@@ -498,47 +510,80 @@
             $(".page2").hide();
             $(".page3").hide();
             $(".page4").hide();
-            $(".next").hide();
-            // $(".next2").hide();
+            $(".page5").hide();
+            $(".undergradProceedBtn").hide();
+            $(".gradProceedBtn").hide();
+            $(".tracker").hide();
+            $("#invalidEmail").hide();
+            $("#invalidNumber").hide();
+
+            // $(".choice").click(function() {
+            //     // Get the value of the clicked choice
+            //     var choiceValue = $(this).data("value");
+
+            //     // Put the value in the input field
+            //     $("#yearLevel").val(choiceValue);
+            // });
+
+
+            $('#dropdownMenuButton').on('click', function() {
+                $('.dropdown-menu').toggle();
+
+                $('.dropdown-menu li').on('click', function() {
+                    var selectedOption = $(this).text();
+                    $('#department').val(selectedOption);
+                    $('.dropdown-menu').toggle('false');
+                });
+            });
 
             $('.carouselExampleIndicators').carousel({
                 interval: 2000
             })
 
-            // $(document).on('click', '#tutorial', function() {
-            //     $("#exampleModal").modal('show');
-            // });
             $(".tutorial").click(function() {
                 $("#exampleModal").modal('show');
             })
-
-            // $(".documents-btn").click(function() {
-            //     $(".next").show();
+            // $("#dropdownMenuButton").click(function() {
+            //     $("dropdown-menu").show();
             // })
+
+
+
+
             // $(document).ready(function() {
+            $("#shiftingForm, #inc, #addSubject, #cor, #dropSubject").change(function() {
+                if ($("#shiftingForm").prop("checked") || $("#inc").prop("checked") || $("#addSubject")
+                    .prop("checked") || $("#cor").prop("checked") || $("#dropSubject").prop("checked")) {
+                    $('.undergradProceedBtn').show();
+                } else {
+                    $('.undergradProceedBtn').hide();
+
+                }
+            });
+            $("#shiftingForm, #inc, #addSubject, #cor, #dropSubject").change(function() {
+                if ($("#shiftingForm").prop("checked") || $("#inc").prop("checked") || $("#addSubject")
+                    .prop("checked") || $("#cor").prop("checked") || $("#dropSubject").prop("checked")) {
+                    $('.gradProceedBtn').show();
+                } else {
+                    $('.gradProceedBtn').hide();
+
+                }
+            });
             //     $('input[type="checkbox"]').change(function() {
-            //         if ($(this).is(':checked')) {
+            //         if ($('input[type="checkbox"]:checked').length > 0) {
             //             $('.next').show();
             //         } else {
             //             $('.next').hide();
             //         }
             //     });
             // });
-            $(document).ready(function() {
-                $('input[type="checkbox"]').change(function() {
-                    if ($('input[type="checkbox"]:checked').length > 0) {
-                        $('.next').show();
-                    } else {
-                        $('.next').hide();
-                    }
-                });
-            });
 
-            $(".next").click(function() {
+            $(".undergradProceedBtn").click(function() {
                 $(".page1").fadeOut(500);
                 $(".page2").fadeIn();
 
             })
+
             $(".backto1").click(function() {
                 $(".page2").fadeOut(500);
                 $(".page1").fadeIn();
@@ -586,7 +631,10 @@
             }
 
             var interval1 = createInterval(1, function() {
-                if ($("#name, #email, #contactNo, #idNumber, #department, #course, #yearLevel").filter(
+                if ($(
+                        "#name, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel"
+                    )
+                    .filter(
                         function() {
                             return !this.value;
                         }).length === 0) {
@@ -607,27 +655,76 @@
                     $(".next3").hide();
                 }
             });
-            // var $input1 = $("#input1"),
-            //     $input2 = $("#input2"),
-            //     $button = $("#button");
-
-            // function checkInputs() {
-            //     if ($input1.val() && $input2.val()) {
-            //         $button.show();
-            //     } else {
-            //         $button.hide();
-            //     }
-            // }
-
-            // $input1.on("input", checkInputs);
-            // $input2.on("input", checkInputs);
 
             $('#calendar').fullCalendar({
 
             })
 
+            // Handles error message
+
+            $("#email-input").on("input", function() {
+                var pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+                if (!pattern.test($(this).val())) {
+                    $("#invalidEmail").show();
+                    // $(".next2").hide();
+                } else {
+                    $("#invalidEmail").hide();
+                }
+            });
 
 
+            $("#contactNo").on("input", function() {
+                // Get the current value of the input field
+                var inputValue = $(this).val();
+
+                // Check if the input value is a number and starts with 0 followed by 9 and is 11 digit number
+                var numberRegex = /^09\d{9}$/;
+                if (numberRegex.test(inputValue)) {
+
+                    $("#invalidNumber").hide();
+
+                } else {
+                    // $(".next2").hide();
+                    $("#invalidNumber").show();
+                }
+            });
+
+
+            //end of error message handling
+            //HANDLES DROP DOWN
+
+
+
+            //END OF HANDLING A DROPDOWN
+            // tracker page
+            $("#track").click(function() {
+                $(".appointment").fadeOut(500);
+                $(".tracker").fadeIn();
+
+
+                $("#appointmentbtn").click(function() {
+                    $(".tracker").fadeOut(500);
+                    $(".appointment").fadeIn();
+                })
+
+                $(".btnTrack").hide();
+
+
+
+                $("#transNum").on("input", function() {
+                    if ($(this).val() && $.isNumeric($(this).val())) {
+                        // do something if the input field has a value and the value is a number
+                        $(".btnTrack").show();
+                    } else {
+                        // do something if the input field is empty or the value is not a number
+                        $(".btnTrack").hide();
+                    }
+                });
+            })
+
+
+
+            // end of tracker page
         });
     </script>
 </body>
@@ -641,15 +738,44 @@
         padding: 0;
     }
 
+    .card-header-page1 {
+        background-color: #800000 !important;
+        color: white !important;
+
+    }
+
+    .card-header:first-child {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+    }
+
     .head {
-        height: 4rem;
-        background-image: linear-gradient(to right, #ff512f, #dd2476);
+        height: 6rem;
+        background: #800000;
+        /* background-image: linear-gradient(to right, #ff512f, #dd2476); */
+    }
+
+    .carousel-item {
+        position: relative;
+    }
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 5);
+        /* black color with 50% opacity */
     }
 
     .modal-body {
         overflow: hidden !important;
         /* height: 350px !important; */
         height: 500px !important;
+        min-height: 100px;
+        min-width: 100px;
 
     }
 
@@ -673,26 +799,7 @@
         padding: 5px;
     }
 
-    /* .carousel-inner {
-        // height: 300px;
-    }
 
-    .item,
-    img {
-        height: 100% !important;
-        width: 100% !important;
-        border: 1px solid red;
-    } */
-    /* .carousel .item {
-        height: 50px;
-    }
-
-    .item img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-height: 50px;
-    } */
     .carousel .carousel-item {
         height: 400px;
     }
@@ -705,9 +812,83 @@
         min-height: 400px;
     }
 
+    .tracker-searchbar {
+        z-index: 1;
+    }
+
     .documents-btn {
-        min-height: 100px !important;
-        min-width: 350px !important;
+        max-height: 250px !important;
+        max-width: 250px !important;
         text-align: center;
+        border-radius: 20px !important;
+        border-color: #107ABE !important;
+        border: 3px solid #107ABE !important;
+    }
+
+    .documents-btn:hover {
+        background-color: #800000 !important;
+    }
+
+    .btn-check:checked+.btn,
+    .btn.active,
+    .btn.show,
+    .btn:first-child:active,
+    :not(.btn-check)+.btn:active {
+        background-color: #800000 !important;
+        border: 3px solid #800000 !important;
+    }
+
+    body {
+        background-color: #dfe6e9 !important;
+    }
+
+    .trackerBtn {
+        background-color: #800000 !important;
+    }
+
+    .card-page1 {
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px darkgray;
+    }
+
+    #tutimg {
+        width: 700px;
+        min-width: 100px !important;
+        min-height: 100px !important;
+    }
+
+    .nav:hover {
+        /* background: white; */
+        /* padding: 2px;
+        color: #ff3838; */
+        border-bottom: 2px solid white;
+    }
+
+    /* .bg-light {
+        background-color: #e74c3c !important;
+    } */
+
+    .transNum {
+        display: block;
+        width: 100%;
+        height: calc(2.25rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white !important;
+        background-color: #c0392b !important;
+        background-clip: padding-box;
+        border: 1px solid black !important;
+        border-radius: 0.25rem;
+        box-shadow: inset 0 0 0 transparent;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 50px !important;
+        height: 50px !important;
+
     }
 </style>
