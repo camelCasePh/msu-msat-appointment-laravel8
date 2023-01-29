@@ -139,6 +139,8 @@
                                     if (response.status == 400) {
                                         // handle error
                                     } else {
+                                        // $('#calendar').fullCalendar(
+                                        // 'refetchEvents');
                                         $('#slotModal').modal('hide');
                                         $('#slotModal').find('input').val("");
                                     }

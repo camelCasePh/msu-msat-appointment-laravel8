@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SlotController;
+use App\Http\Controllers\AppointmentController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,6 +34,8 @@ use Illuminate\Support\Facades\Auth;
   Route::get('/appointment',function(){
     return view('appointment');
 })->name('appointment');
+Route::get('/appointment', 'AppointmentController@index');
+
 
 Route::get('/',[LoginController::class,'index']);
 Route::post('/login',[LoginController::class,'userLogin'])->name('login');
