@@ -45,13 +45,13 @@
                 <br>
                 <h5>2. Input your personal information </h5>
                 <div class="pl-3 pr-2">
-                    <img id="responsive-image-modal-tutorial" src="../../dist/img/inputpersonalinfo.png" id="tutimg">
+                    <img id="responsive-image-modal-tutorial" src="../../dist/img/personalinfo.png" id="tutimg">
 
                 </div>
                 <br>
                 <h5>3. Input year level and semester </h5>
                 <div class="pl-3 pr-2">
-                    <img id="responsive-image-modal-tutorial" src="../../dist/img/step2.png" id="tutimg">
+                    <img id="responsive-image-modal-tutorial" src="../../dist/img/documentpreview.png" id="tutimg">
 
                 </div>
                 <br>
@@ -75,7 +75,7 @@
 {{-- end modal --}}
 
 <body>
-    <header class="head d-flex flex-row  pt-4 pb-2 text-white">
+    <header class="head d-flex flex-row  pt-4 pb-2 text-white" id="header">
 
 
 
@@ -86,7 +86,7 @@
 
 
         <div class="d-flex align-items-start flex-column pb-2">
-            <strong style="font-size: 25px">Registrar Office Online Appointment</strong>
+            <strong style="font-size: 25px">Registrar Online Appointment</strong>
             <div class="ts-12">Maigo, Lanao del Norte</div>
         </div>
         <div class="ms-auto d-flex  justify-content-end flex-row bd-highlight right-navigation mr-5">
@@ -167,27 +167,32 @@
                                         <div class="d-flex align-content-start flex-wrap my-4 btn-group "
                                             role="group" aria-label="Basic checkbox toggle button group">
 
-                                            <input type="checkbox" class="btn-check documents-btn" id="shiftingForm"
-                                                autocomplete="off" value="Shifting Form">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class="undergrad-doc btn-check documents-btn"
+                                                id="shiftingForm" autocomplete="off" value="Shifting Form">
+                                            <label
+                                                class=" undergrad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="shiftingForm">SHIFTING FORM</label>
 
-                                            <input type="checkbox" class="btn-check documents-btn" id="inc"
-                                                autocomplete="off" value="Completion of Inc Grade">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class=" undergrad-doc btn-check documents-btn "
+                                                id="inc" autocomplete="off" value="Completion of Inc Grade">
+                                            <label
+                                                class="undergrad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="inc">COMPLETION OF INC GRADE</label>
 
-                                            <input type="checkbox" class="btn-check documents-btn" id="addSubject"
-                                                autocomplete="off" value="Adding of Subject">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class="undergrad-doc btn-check documents-btn"
+                                                id="addSubject" autocomplete="off" value="Adding of Subject">
+                                            <label
+                                                class="undergrad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="addSubject">ADDING OF SUBJECT</label>
-                                            <input type="checkbox" class="btn-check documents-btn" id="cor"
-                                                autocomplete="off" value="Cor">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class=" undergrad-doc btn-check documents-btn"
+                                                id="cor" autocomplete="off" value="Cor">
+                                            <label
+                                                class="undergrad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="cor">COR</label>
-                                            <input type="checkbox" class="btn-check documents-btn" id="dropSubject"
-                                                autocomplete="off" value="Dropping of Subject">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class="undergrad-doc btn-check documents-btn"
+                                                id="dropSubject" autocomplete="off" value="Dropping of Subject">
+                                            <label
+                                                class="undergrad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="dropSubject">DROPPING OF SUBJECT</label>
 
 
@@ -213,21 +218,23 @@
 
                                         <div class="d-flex align-content-start flex-wrap my-4 btn-group"
                                             role="group" aria-label="Basic checkbox toggle button group">
-                                            <input type="checkbox" class="btn-check documents-btn"
+                                            <input type="checkbox" class="grad-doc btn-check documents-btn"
                                                 id="honorableDismissal" autocomplete="off"
                                                 value="Honorable Dismissal">
                                             <label
-                                                class=" text-wrap btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                                class="grad-doc text-wrap btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="honorableDismissal">HONORABLE DISMISSAL</label>
 
-                                            <input type="checkbox" class="btn-check documents-btn" id="tor"
-                                                autocomplete="off" value="Tor">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <input type="checkbox" class="grad-doc btn-check documents-btn"
+                                                id="tor" autocomplete="off" value="Tor">
+                                            <label
+                                                class=" grad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="tor">TOR</label>
 
-                                            <input type="checkbox" class="btn-check documents-btn"
+                                            <input type="checkbox" class="grad-doc btn-check documents-btn"
                                                 id="formonethreeseven" autocomplete="off" value="Form 137">
-                                            <label class="btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
+                                            <label
+                                                class="grad-doc btn btn-outline-secondary m-1 p-5 fs-6 rounded documents-btn"
                                                 for="formonethreeseven">FORM 137</label>
 
 
@@ -553,19 +560,48 @@
                                 <img class="responsive-image" src="../../dist/img/step22.png">
 
                             </div>
-                            <h3>Request Form</h3>
-                            <div style="height: 2px; background:black;"></div>
                             <div class="d-flex bd-highlight mb-2 mt-3">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Year Level
+                                <div class="col-4 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Document
+                                    Requested
                                 </div>
-                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
+                                <div class="col-8 pl-2 pr-2 flex-fill bd-highlight">
+
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="documentRequested" readonly>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex bd-highlight mb-2 mt-3">
+
+                                <div class="yearLevelContainer col-2 pl-2  flex-fill bd-highlight"
+                                    id="responsive-text">Year Level
+                                </div>
+                                <div class="yearLevelContainer col-9 flex-fill bd-highlight">
 
                                     <input class="form-control bg-light" type="text"
                                         aria-label="readonly input example" id="yearLvl">
                                 </div>
 
+
+                                <div class="yearGraduatedContainer col-3 pl-2  flex-fill bd-highlight"
+                                    id="responsive-text">Year Graduated</div>
+                                <div class="yearGraduatedContainer col-8 flex-fill bd-highlight">
+
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="yearGraduated">
+                                </div>
+
+                                <div class="col-2 pl-2 flex-fill bd-highlight" id="responsive-text">Semester
+                                </div>
+                                <div class="col-9  flex-fill bd-highlight">
+
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="semester">
+                                </div>
+
                             </div>
-                            <div class="d-flex bd-highlight mb-2 mt-3">
+                            {{-- <div class="d-flex bd-highlight mb-2 mt-3">
                                 <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Semester
                                 </div>
                                 <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
@@ -574,7 +610,7 @@
                                         aria-label="readonly input example" id="semester">
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                             <div class="d-flex flex-row">
 
@@ -635,6 +671,19 @@
             $("#invalidNumber").hide();
             $("#invalidId").hide();
             $("#invalidName").hide();
+            // $(".yearLevelContainer").hide();
+            $(".yearGraduatedContainer").hide();
+
+
+
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('#header').addClass("sticky-header");
+                } else {
+                    $('#header').removeClass("sticky-header");
+                }
+            });
 
             $('#dropdownMenuDepartment').on('click', function() {
                 $('.dropdown-menu-department').toggle();
@@ -678,8 +727,13 @@
                 if ($("#shiftingForm").prop("checked") || $("#inc").prop("checked") || $("#addSubject")
                     .prop("checked") || $("#cor").prop("checked") || $("#dropSubject").prop("checked")) {
                     $('.undergradProceedBtn').show();
+
+                    // $('.grad-doc').attr('disabled', true);
+                    $(".grad-doc").addClass("disabled");
+                    // $('.grad-doc input[type="checkbox"]').removeAttr('disabled');
                 } else {
                     $('.undergradProceedBtn').hide();
+                    $(".grad-doc").removeClass("disabled");
 
                 }
             });
@@ -687,22 +741,30 @@
                 if ($("#honorableDismissal").prop("checked") || $("#tor").prop("checked") || $(
                         "#formonethreeseven").prop("checked")) {
                     $('.gradProceedBtn').show();
+                    $(".undergrad-doc").addClass("disabled");
                 } else {
                     $('.gradProceedBtn').hide();
+                    $(".undergrad-doc").removeClass("disabled");
 
                 }
             });
 
 
             $(".backto1").click(function() {
+
                 $(".page2").fadeOut(500);
                 // $(".page1").fadeIn();
                 $('.main-section').removeClass('div-below position-relative');
                 $('.section1').removeClass('div-below blur dark-effect');
 
                 $(".grad-card").fadeIn();
+                $('.documents-btn').prop("disabled", false);
+
             })
             $(".undergradProceedBtn").click(function() {
+                $('html, body').animate({
+                    scrollTop: $('.section1').offset().top
+                }, 1000);
                 $('.main-section').addClass('div-below position-relative');
                 $('.section1').addClass('div-below blur dark-effect');
 
@@ -711,11 +773,39 @@
                 $(".page2").fadeIn();
 
                 $(".grad-card").fadeOut();
+
+                // $('input[type="checkbox"]').click(function() {
+                //     var values = [];
+                //     $('input[type="checkbox"]:checked').each(function() {
+                //         values.push($(this).val());
+                //     });
+                //     $('#documentRequested').val(values.join(', '));
+                var documentRequested = [];
+                $('input[type=checkbox]:checked').each(function() {
+                    documentRequested.push($(this).val());
+                });
+                $('#documentRequested').text(documentRequested.join(', '));
+
+                // });
+
+                $('.documents-btn').prop("disabled", true);
+                // $(".undergrad-doc").attr("disabled", true);
+
+                $(".yearLevelContainer").show();
+                $(".yearGraduatedContainer").hide();
+
 
 
             })
 
             $(".gradProceedBtn").click(function() {
+                $('html, body').animate({
+                    scrollTop: $('.section1').offset().top
+                }, 1000);
+                // $('html,body').animate({
+                //     scrollLeft: $('.section1').offset().left
+                // }, 1000);
+
                 $('.main-section').addClass('div-below position-relative');
                 $('.section1').addClass('div-below blur dark-effect');
 
@@ -726,9 +816,39 @@
 
 
 
+                var documentRequested = [];
+                $('input[type=checkbox]:checked').each(function() {
+                    documentRequested.push($(this).val());
+                });
+                $('#documentRequested').text(documentRequested.join(', '));
+
+
+
+
+                // $('input[type="checkbox"]').click(function() {
+                //     var values = [];
+                //     $('input[type="checkbox"]:checked').each(function() {
+                //         values.push($(this).val());
+                //     });
+                //     $('#documentRequested').val(values.join(', '));
+                // });
+                $('.documents-btn').prop("disabled", true);
+                $(".yearGraduatedContainer").show();
+                $(".yearLevelContainer").hide();
+
+
             })
+            $('input[type=checkbox]').change(function() {
+                var documentRequested = [];
+                $('input[type=checkbox]:checked').each(function() {
+                    documentRequested.push($(this).val());
+                });
+                $('#documentRequested').val(documentRequested.join(', '));
+            });
+
             $(".next2").click(function() {
 
+                // $('#documentRequested').val(selectedOption);
                 // $(".page2").fadeOut(500);
                 // $(".page3").fadeIn();
                 $('.page2').slideUp(500, function() {
@@ -797,7 +917,8 @@
 
                         if ($("#userName").val().length > 0 && $("#email-input").val().length > 0 && $(
                                 "#contactNo")
-                            .val().length > 0 && $("#idNumber").val().length > 0) {
+                            .val().length > 0 && $("#idNumber").val().length > 0 && !$('.error-message').is(
+                                ':visible')) {
                             $(".next2").show();
                             //
                             // console.log($('#userName').val());
@@ -1054,6 +1175,18 @@
         /* black color with 50% opacity */
     }
 
+    input[type="text"] {
+        /* box-shadow: 2px 5px gray; */
+        border-bottom: 2px solid gray;
+
+    }
+
+    input[type="email"] {
+        /* box-shadow: 0px 2px 5px 0px gray; */
+        border-bottom: 2px solid gray;
+
+    }
+
     .modal-body {
         overflow: hidden !important;
         /* height: 350px !important; */
@@ -1135,6 +1268,12 @@
         box-shadow: 0px 0px 10px 0px darkgray;
     }
 
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+
     #tutimg {
         width: 700px;
         min-width: 100px !important;
@@ -1195,6 +1334,7 @@
     /* Default styles for the image */
     .responsive-image {
         width: 100%;
+
     }
 
     /* Styles for screens less than 768px */
@@ -1250,4 +1390,11 @@
         font-size: 16px;
         /* default font-size */
     }
+
+    /* .sticky-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    } */
 </style>
