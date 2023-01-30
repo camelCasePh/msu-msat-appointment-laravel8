@@ -255,47 +255,7 @@
                             {{-- end of page 1 --}}
                         </div>
 
-                        <div class="card p-5 page3">
-                            <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request
-                                Form
-                            </h1>
-                            <div>
-                                <img src="../../dist/img/step22.png">
 
-                            </div>
-                            <h3>Request Form</h3>
-                            <div style="height: 2px; background:black;"></div>
-                            <div class="d-flex bd-highlight mb-2 mt-3">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Year Level
-                                </div>
-                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
-
-                                    <input class="form-control bg-light" type="text"
-                                        aria-label="readonly input example" id="yearLvl">
-                                </div>
-
-                            </div>
-                            <div class="d-flex bd-highlight mb-2 mt-3">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Semester
-                                </div>
-                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
-
-                                    <input class="form-control bg-light" type="text"
-                                        aria-label="readonly input example" id="semester">
-                                </div>
-
-                            </div>
-
-                            <div class="d-flex flex-row">
-
-                                <button type="button" class="backto2 btn btn-secondary btn-lg">Back</button>
-
-                                <div class="ms-auto">
-                                    <button type="button" class="next3 btn btn-secondary btn-lg">Next</button>
-                                </div>
-                            </div>
-                            {{-- end of page 3 --}}
-                        </div>
 
                         <div class="card p-5 page4">
                             <h1 class="pt-3 pl-5 pb-3" style="background: #bdc3c7; color:black; padding:5px;">Request
@@ -406,13 +366,17 @@
 
 
                             <div class="d-flex bd-highlight mb-2 mt-3">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">Name</div>
+                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">Full Name
+                                </div>
                                 <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
                                     <input class="form-control bg-light" type="text"
                                         aria-label="readonly input example" id="userName" name="name">
                                 </div>
 
                             </div>
+                            <div class="alert alert-danger" role="alert" id="invalidName">
+                                Hi, it looks like you entered an invalid name format Please use your name and your
+                                lastname or even your full name.</div>
                             <div class="d-flex bd-highlight mb-2">
                                 <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">Email
                                 </div>
@@ -426,32 +390,6 @@
                                 Hi, before proceeding please make sure, your email is active and valid, because it will
                                 be used for sending notifications about your appointment.
                             </div>
-                            <div class="d-flex bd-highlight mb-2">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">Contact
-                                    no.</div>
-                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
-                                    <input class="form-control bg-light" type="text"
-                                        aria-label="readonly input example" id="contactNo" name="contactNo">
-                                </div>
-
-                            </div>
-                            <div class="alert alert-danger" role="alert" id="invalidNumber">
-                                Hi, before proceeding please make sure, your Phone number is active and valid, because
-                                it will
-                                be used for sending notifications about your appointment </div>
-
-                            <div class="d-flex bd-highlight mb-2">
-                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">ID
-                                    Number</div>
-                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
-                                    <input class="form-control bg-light" type="text"
-                                        aria-label="readonly input example" id="idNumber" name="idNumber">
-                                </div>
-
-                            </div>
-                            <div class="alert alert-danger" role="alert" id="invalidId">
-                                It looks like you entered an invalid ID Number, please enter a valid ID Number. </div>
-
                             <div class="d-flex bd-highlight mb-2">
                                 <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">
                                     Department</div>
@@ -541,6 +479,33 @@
                                 </div>
 
                             </div>
+                            <div class="d-flex bd-highlight mb-2">
+                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">Contact
+                                    no.</div>
+                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="contactNo" name="contactNo">
+                                </div>
+
+                            </div>
+                            <div class="alert alert-danger" role="alert" id="invalidNumber">
+                                Hi, before proceeding please make sure, your Phone number is active and valid, because
+                                it will
+                                be used for sending notifications about your appointment </div>
+
+                            <div class="d-flex bd-highlight mb-2">
+                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight " id="responsive-text">ID
+                                    Number</div>
+                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight ">
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="idNumber" name="idNumber">
+                                </div>
+
+                            </div>
+                            <div class="alert alert-danger" role="alert" id="invalidId">
+                                It looks like you entered an invalid ID Number, please enter a valid ID Number. </div>
+
+
 
 
                             <div class="d-flex flex-row">
@@ -561,15 +526,6 @@
             </div>
             {{-- end of page 2 container --}}
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 mt-5">
-                        {{-- end of col dev --}}
-                    </div>
-                    {{-- end of row dev --}}
-                </div>
-                {{-- end of container dev --}}
-            </div>
 
             <div class="container">
                 <div class="row">
@@ -581,6 +537,65 @@
                 {{-- end of container dev --}}
             </div>
             {{-- end of section 2 --}}
+        </section>
+        <section class="section3">
+            {{-- page 3 container --}}
+            <div class="container container-page3">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        {{-- end of col dev --}}
+                        <div class="card p-5 card-page page3">
+                            <h1 class="pt-3 pl-5 pb-3"
+                                style="background:#008080; color:white; padding:5px; text-align:center;">Document
+                                Preview
+                            </h1>
+                            <div>
+                                <img class="responsive-image" src="../../dist/img/step22.png">
+
+                            </div>
+                            <h3>Request Form</h3>
+                            <div style="height: 2px; background:black;"></div>
+                            <div class="d-flex bd-highlight mb-2 mt-3">
+                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Year Level
+                                </div>
+                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
+
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="yearLvl">
+                                </div>
+
+                            </div>
+                            <div class="d-flex bd-highlight mb-2 mt-3">
+                                <div class="col-3 pl-2 pr-2 flex-fill bd-highlight" id="responsive-text">Semester
+                                </div>
+                                <div class="col-9 pl-2 pr-2 flex-fill bd-highlight">
+
+                                    <input class="form-control bg-light" type="text"
+                                        aria-label="readonly input example" id="semester">
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex flex-row">
+
+                                <button style="color:white; background-color:#008080;" type="button"
+                                    class="backto2 btn btn-lg">Back</button>
+
+                                <div class="ms-auto">
+                                    <button style="color:white; background-color:#008080;" type="button"
+                                        class="next3 btn btn-lg">Next</button>
+                                </div>
+                            </div>
+                            {{-- end of page 3 --}}
+                        </div>
+                    </div>
+                    {{-- end of row dev --}}
+                </div>
+                {{-- end of container dev --}}
+            </div>
+
+            {{-- end of page 3 container --}}
+
         </section>
 
 
@@ -619,6 +634,7 @@
             $("#invalidEmail").hide();
             $("#invalidNumber").hide();
             $("#invalidId").hide();
+            $("#invalidName").hide();
 
             $('#dropdownMenuDepartment').on('click', function() {
                 $('.dropdown-menu-department').toggle();
@@ -696,12 +712,6 @@
 
                 $(".grad-card").fadeOut();
 
-                // var formRequested = [];
-                // $('input[type=checkbox]:checked').each(function() {
-                //     formRequested.push($(this).val());
-                // });
-                // $('.formRequested').text(formRequested.join(', '));
-
 
             })
 
@@ -714,31 +724,92 @@
                 $(".page2").fadeIn();
                 $(".grad-card").fadeOut();
 
-                // var formRequested = [];
-                // $('input[type=checkbox]:checked').each(function() {
-                //     formRequested.push($(this).val());
-                // });
-                // $('.formRequested').text(formRequested.join(', '));
+
+
+            })
+            $(".next2").click(function() {
+
+                // $(".page2").fadeOut(500);
+                // $(".page3").fadeIn();
+                $('.page2').slideUp(500, function() {
+
+                    $(".page2").fadeOut();
+
+                    $('.page3').slideUp(500, function() {
+                        $(".page3").fadeIn();
+                    });
+
+                    $('.main-section').addClass('div-below position-relative');
+                    $('.section1').addClass('div-below blur dark-effect');
+
+                    $('.section2').removeClass(
+                        'div-above position-absolute top-50 start-50 translate-middle');
+
+                    $(".grad-card").fadeOut();
+                    $('.section3').addClass(
+                        'div-above position-absolute top-50 start-50 translate-middle');
+                });
+
+
+
+
+
+            })
+            $(".backto2").click(function() {
+
+                $('.page3').slideUp(500, function() {
+                    $('.main-section').addClass('div-below position-relative');
+                    $('.section1').addClass('div-below blur dark-effect');
+
+                    $('.section2').addClass(
+                        'div-above position-absolute top-50 start-50 translate-middle');
+
+
+
+                    $(".page2").fadeIn();
+                    $(".page3").fadeOut();
+
+
+                    $(".grad-card").fadeOut();
+                    $('.section3').removeClass(
+                        'div-above position-absolute top-50 start-50 translate-middle');
+                });
+
 
             })
 
 
+            // console.log(#userName.val());
 
-
-            $("#userName, #email-input, #contactNo, #idNumber, #department, #course, #yearLevel").on("input",
+            $("#userName, #email-input, #contactNo, #idNumber").on("input",
                 function() {
-                    if ($("#userName").val().length > 0 && $("#email-input").val().length > 0 && $("#contactNo")
-                        .val().length > 0 && $("#idNumber").val().length > 0 && $("#department").val().length >
-                        0 && $("#course").val().length > 0 && $("#yearLevel").val().length > 0) {
-                        console.log("show button");
-                        $(".next2").show();
-                    } else {
-                        console.log("hide button");
-                        $(".next2").hide();
+                    console.log("input fields changed");
+                    console.log($("#userName").val().length);
+                    console.log($("#email-input").val().length);
+                    console.log($("#contactNo").val().length);
+                    console.log($("#idNumber").val().length);
+
+                    if ($('#department').val() !== '' && $('#course').val() !== '' && $('#yearLevel').val() !==
+                        '') {
+                        // input field has a value
+                        console.log($("#department").val().length);
+
+
+                        if ($("#userName").val().length > 0 && $("#email-input").val().length > 0 && $(
+                                "#contactNo")
+                            .val().length > 0 && $("#idNumber").val().length > 0) {
+                            $(".next2").show();
+                            //
+                            // console.log($('#userName').val());
+
+                        } else {
+                            console.log("hide button");
+                            $(".next2").hide();
+                        }
                     }
 
                 });
-            // #yearLvl, #semester
+
             $("#yearLvl, #semester").on("input",
                 function() {
                     if ($("#yearLvl").val().length > 0 && $("#semester").val().length > 0) {
@@ -752,21 +823,7 @@
                 });
 
 
-            $(".next2").click(function() {
-                // $(".page1").hide();
-                $(".page2").fadeOut(500);
-                $(".page3").fadeIn();
 
-                // var email = $('#email').val();
-                // var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                // if (pattern.test(email)) {
-                //     $('#invalidEmail').hide();
-                //     // your code to submit the form
-                //     $(".page2").fadeOut(500);
-                //     $(".page3").fadeIn();
-                // }
-
-            })
 
             $(".next3").click(function() {
                 $(".page1").hide();
@@ -774,11 +831,7 @@
                 $(".page4").fadeIn();
 
             })
-            $(".backto2").click(function() {
-                $(".page3").fadeOut(500);
-                $(".page2").fadeIn();
 
-            })
             $(".next4").click(function() {
                 $(".page1").hide();
                 $(".page4").fadeOut(500);
@@ -809,6 +862,18 @@
             });
 
             // Handles error message
+            $('#userName').on('input', function() {
+                var inputValue = $(this).val();
+                var wordCount = inputValue.split(/\s+/).length;
+                var stringRegex = /^[a-zA-Z\s]+$/;
+                if (stringRegex.test(inputValue) && wordCount >= 2 && wordCount <= 5) {
+                    $("#invalidName").hide();
+                } else {
+                    $('.next2').hide();
+                    $("#invalidName").show();
+                }
+
+            });
 
             $("#email-input").on("input", function() {
                 var pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
@@ -818,6 +883,7 @@
                     $(".next2").hide();
                 } else {
                     $("#invalidEmail").hide();
+                    // $(".next2").show();
                 }
             });
 
@@ -831,6 +897,7 @@
                 if (numberRegex.test(inputValue)) {
 
                     $("#invalidNumber").hide();
+                    // $(".next2").show();
 
                 } else {
                     $(".next2").hide();
@@ -844,6 +911,8 @@
                 if (pattern.test(idNumber)) {
                     // $('#submitButton').hide();
                     $("#invalidId").hide();
+                    // $(".next2").show();
+
                 } else {
                     $(".next2").hide();
                     $("#invalidId").show();
@@ -1147,7 +1216,9 @@
     /* Styles for screens greater than or equal to 992px */
     @media (min-width: 992px) {
         .responsive-image {
-            width: 100%;
+            /* width: 100%;
+             */
+            width: 200px;
             /* or any other value that you want */
         }
     }
